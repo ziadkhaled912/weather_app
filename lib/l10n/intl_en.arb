@@ -1,0 +1,8 @@
+{
+  "@@locale": "en",
+  "somethingWentWrong" : "Something went wrong, please try again later",
+  "serviceError": "Service unavailable, please try again later.",
+  "forbiddenAccessError": "You don't have the adequate permissions to view this.",
+  "contentError": "This content is unavailable currently, please try again later",
+  "internetError": "Please check your internet connection"
+}
