@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:gam3ity/utilities/router.dart';
+import 'package:go_router/go_router.dart';
 
 import 'generated/l10n.dart';
 
@@ -12,7 +14,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       title: 'Gam3ity',
       debugShowCheckedModeBanner: false,
       supportedLocales: S.delegate.supportedLocales,
@@ -22,11 +24,13 @@ class MyApp extends StatelessWidget {
         GlobalWidgetsLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
       ],
+      routeInformationProvider: router().routeInformationProvider,
+      routeInformationParser: router().routeInformationParser,
+      routerDelegate: router().routerDelegate,
       // locale: ,
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      // home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
 }

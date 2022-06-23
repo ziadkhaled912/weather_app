@@ -1,6 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:gam3ity/core/constants/cache_keys.dart';
-import 'package:gam3ity/core/domain/datasources/cache_helper.dart';
+import 'package:gam3ity/core/data/datasources/cache_helper.dart';
 import 'package:gam3ity/di/injection_container.dart';
 
 class LanguageInterceptor extends Interceptor {

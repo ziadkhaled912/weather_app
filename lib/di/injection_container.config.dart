@@ -10,7 +10,9 @@ import 'package:injectable/injectable.dart' as _i2;
 import 'package:shared_preferences/shared_preferences.dart' as _i5;
 
 import '../core/app/app_config.dart' as _i3;
-import 'app_module.dart' as _i6; // ignore_for_file: unnecessary_lambdas
+import '../core/data/datasources/cache_helper.dart' as _i6;
+import '../core/data/datasources/cache_helper_impl.dart' as _i7;
+import 'app_module.dart' as _i8; // ignore_for_file: unnecessary_lambdas
 
 // ignore_for_file: lines_longer_than_80_chars
 /// initializes the registration of provided dependencies inside of [GetIt]
@@ -22,7 +24,9 @@ Future<_i1.GetIt> $initGetIt(_i1.GetIt get,
   gh.lazySingleton<_i4.Dio>(() => appModule.dio);
   await gh.factoryAsync<_i5.SharedPreferences>(() => appModule.prefs,
       preResolve: true);
+  gh.singleton<_i6.CacheHelper>(
+      _i7.CacheHelperImpl(get<_i5.SharedPreferences>()));
   return get;
 }
 
-class _$AppModule extends _i6.AppModule {}
+class _$AppModule extends _i8.AppModule {}
