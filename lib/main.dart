@@ -1,12 +1,25 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:gam3ity/core/app/config_reader.dart';
+import 'package:gam3ity/core/presentation/cubit/bloc_observer.dart';
 import 'package:gam3ity/utilities/router.dart';
-import 'package:go_router/go_router.dart';
-
+import 'package:gam3ity/utilities/theme/cubit/theme_cubit.dart';
+import 'package:gam3ity/utilities/theme/cubit/theme_state.dart';
+import 'package:gam3ity/di/injection_container.dart' as di;
+import 'package:gam3ity/utilities/theme/light_theme/light_theme.dart';
 import 'generated/l10n.dart';
 
-void main() {
-  runApp(const MyApp());
+void main() async {
+  await BlocOverrides.runZoned(
+    () async {
+      await initialize();
+      preventLandscape();
+      runApp(const MyApp());
+    },
+    blocObserver: MyBlocObserver(),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -14,23 +27,42 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp.router(
-      title: 'Gam3ity',
-      debugShowCheckedModeBanner: false,
-      supportedLocales: S.delegate.supportedLocales,
-      localizationsDelegates: const [
-        S.delegate,
-        GlobalMaterialLocalizations.delegate,
-        GlobalWidgetsLocalizations.delegate,
-        GlobalCupertinoLocalizations.delegate,
-      ],
-      routeInformationProvider: router().routeInformationProvider,
-      routeInformationParser: router().routeInformationParser,
-      routerDelegate: router().routerDelegate,
-      // locale: ,
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
+    return BlocProvider(
+      create: (context) => ThemeCubit()..getCurrentLocale(),
+      child: BlocBuilder<ThemeCubit, ThemeState>(
+        builder: (context, state) {
+          return MaterialApp.router(
+            title: 'Gam3ity',
+            debugShowCheckedModeBanner: false,
+            supportedLocales: S.delegate.supportedLocales,
+            localizationsDelegates: const [
+              S.delegate,
+              GlobalMaterialLocalizations.delegate,
+              GlobalWidgetsLocalizations.delegate,
+              GlobalCupertinoLocalizations.delegate,
+            ],
+            routeInformationProvider: router().routeInformationProvider,
+            routeInformationParser: router().routeInformationParser,
+            routerDelegate: router().routerDelegate,
+            locale: BlocProvider.of<ThemeCubit>(context).locale,
+            theme: Gam3ityLightTheme().lightTheme(
+              locale: BlocProvider.of<ThemeCubit>(context).locale,
+            ),
+          );
+        },
       ),
     );
   }
+}
+
+void preventLandscape() {
+  SystemChrome.setPreferredOrientations(
+    [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown],
+  );
+}
+
+Future<void> initialize() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await ConfigReader.initialize();
+  await di.configure();
 }
