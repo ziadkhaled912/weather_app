@@ -9,7 +9,7 @@ class Gam3ityLightTheme {
     required Locale locale,
   }) {
     return ThemeData(
-      fontFamily: locale == englishLocale? 'Poppins' : 'Cairo',
+      fontFamily: locale == englishLocale? 'Poppins' : 'Inter',
       primaryColor: LightColors.primaryColor,
       accentColor: LightColors.secondaryColor,
       indicatorColor: lightColorScheme.secondary,

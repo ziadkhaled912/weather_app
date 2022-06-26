@@ -22,12 +22,25 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "back": MessageLookupByLibrary.simpleMessage("العودة"),
         "contentError": MessageLookupByLibrary.simpleMessage(
             "هذا المحتوى غير متوفر حالياً، من فضلك حاول في وقت لاحق"),
         "forbiddenAccessError": MessageLookupByLibrary.simpleMessage(
             "لا تملك الصلاحيات الكافية للإطلاع"),
         "internetError": MessageLookupByLibrary.simpleMessage(
             "من فضلك تفقد إتصالك بالإنترنت"),
+        "lang": MessageLookupByLibrary.simpleMessage("عربى"),
+        "next": MessageLookupByLibrary.simpleMessage("التالى"),
+        "onBoardingSubtitle1": MessageLookupByLibrary.simpleMessage(
+            "كل الجمعيات مضمونة بسبب ان كل مستخدمين \nبيقدمو ضمانات قانونية"),
+        "onBoardingSubtitle2": MessageLookupByLibrary.simpleMessage(
+            "هتقدر تلاقى الجمعية الى تناسبك و كمان \nتظبط مواعيد الدفع و القبض بسهولة"),
+        "onBoardingSubtitle3": MessageLookupByLibrary.simpleMessage(
+            "تقدر تعمل الجمعية الخاصة بيك و تدعو ليها اصحابك"),
+        "onBoardingTitle1": MessageLookupByLibrary.simpleMessage("امان"),
+        "onBoardingTitle2": MessageLookupByLibrary.simpleMessage("سهل"),
+        "onBoardingTitle3":
+            MessageLookupByLibrary.simpleMessage("ظبط جمعيتك على مزاجك"),
         "serviceError": MessageLookupByLibrary.simpleMessage(
             "الخدمة غير متوفرة، من فضلك حاول في وقت لاحق"),
         "somethingWentWrong": MessageLookupByLibrary.simpleMessage(

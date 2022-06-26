@@ -22,12 +22,25 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "back": MessageLookupByLibrary.simpleMessage("Back"),
         "contentError": MessageLookupByLibrary.simpleMessage(
             "This content is unavailable currently, please try again later"),
         "forbiddenAccessError": MessageLookupByLibrary.simpleMessage(
             "You don\'t have the adequate permissions to view this."),
         "internetError": MessageLookupByLibrary.simpleMessage(
             "Please check your internet connection"),
+        "lang": MessageLookupByLibrary.simpleMessage("English"),
+        "next": MessageLookupByLibrary.simpleMessage("Next"),
+        "onBoardingSubtitle1": MessageLookupByLibrary.simpleMessage(
+            "All circles are guaranteed because all users\nThey offer legal guarantees"),
+        "onBoardingSubtitle2": MessageLookupByLibrary.simpleMessage(
+            "You will be able to find the circle that suits you, as well\nEasily adjust payment and receivable dates"),
+        "onBoardingSubtitle3": MessageLookupByLibrary.simpleMessage(
+            "You can create your own circle and invite your friends to it"),
+        "onBoardingTitle1": MessageLookupByLibrary.simpleMessage("Secure"),
+        "onBoardingTitle2": MessageLookupByLibrary.simpleMessage("Easy"),
+        "onBoardingTitle3":
+            MessageLookupByLibrary.simpleMessage("Customize your own circle"),
         "serviceError": MessageLookupByLibrary.simpleMessage(
             "Service unavailable, please try again later."),
         "somethingWentWrong": MessageLookupByLibrary.simpleMessage(

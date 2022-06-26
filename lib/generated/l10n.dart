@@ -99,6 +99,96 @@ class S {
       args: [],
     );
   }
+
+  /// `Next`
+  String get next {
+    return Intl.message(
+      'Next',
+      name: 'next',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Back`
+  String get back {
+    return Intl.message(
+      'Back',
+      name: 'back',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `English`
+  String get lang {
+    return Intl.message(
+      'English',
+      name: 'lang',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Secure`
+  String get onBoardingTitle1 {
+    return Intl.message(
+      'Secure',
+      name: 'onBoardingTitle1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Easy`
+  String get onBoardingTitle2 {
+    return Intl.message(
+      'Easy',
+      name: 'onBoardingTitle2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Customize your own circle`
+  String get onBoardingTitle3 {
+    return Intl.message(
+      'Customize your own circle',
+      name: 'onBoardingTitle3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `All circles are guaranteed because all users\nThey offer legal guarantees`
+  String get onBoardingSubtitle1 {
+    return Intl.message(
+      'All circles are guaranteed because all users\nThey offer legal guarantees',
+      name: 'onBoardingSubtitle1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `You will be able to find the circle that suits you, as well\nEasily adjust payment and receivable dates`
+  String get onBoardingSubtitle2 {
+    return Intl.message(
+      'You will be able to find the circle that suits you, as well\nEasily adjust payment and receivable dates',
+      name: 'onBoardingSubtitle2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `You can create your own circle and invite your friends to it`
+  String get onBoardingSubtitle3 {
+    return Intl.message(
+      'You can create your own circle and invite your friends to it',
+      name: 'onBoardingSubtitle3',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

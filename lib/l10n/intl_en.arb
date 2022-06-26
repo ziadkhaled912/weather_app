@@ -4,5 +4,14 @@
   "serviceError": "Service unavailable, please try again later.",
   "forbiddenAccessError": "You don't have the adequate permissions to view this.",
   "contentError": "This content is unavailable currently, please try again later",
-  "internetError": "Please check your internet connection"
+  "internetError": "Please check your internet connection",
+  "next": "Next",
+  "back": "Back",
+  "lang": "English",
+  "onBoardingTitle1": "Secure",
+  "onBoardingTitle2": "Easy",
+  "onBoardingTitle3": "Customize your own circle",
+  "onBoardingSubtitle1": "All circles are guaranteed because all users\nThey offer legal guarantees",
+  "onBoardingSubtitle2": "You will be able to find the circle that suits you, as well\nEasily adjust payment and receivable dates",
+  "onBoardingSubtitle3": "You can create your own circle and invite your friends to it"
 }
