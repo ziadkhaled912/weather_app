@@ -13,5 +13,18 @@
   "onBoardingTitle3": "ظبط جمعيتك على مزاجك",
   "onBoardingSubtitle1": "كل الجمعيات مضمونة بسبب ان كل مستخدمين \nبيقدمو ضمانات قانونية",
   "onBoardingSubtitle2": "هتقدر تلاقى الجمعية الى تناسبك و كمان \nتظبط مواعيد الدفع و القبض بسهولة",
-  "onBoardingSubtitle3": "تقدر تعمل الجمعية الخاصة بيك و تدعو ليها اصحابك"
+  "onBoardingSubtitle3": "تقدر تعمل الجمعية الخاصة بيك و تدعو ليها اصحابك",
+  "register": "حساب جديد",
+  "login": "تسجيل دخول",
+  "thisFieldIsRequired": "هذا الحقل مطلوب",
+  "mobileNumberValidation": "رقم الهاتف الذى ادخلته غير صالح",
+  "enterPhoneNumber": "اكتب رقم الموبايل",
+  "password": "كلمة مرور",
+  "enterPassword": "ادخل كلمة مرور",
+  "name": "اسمك",
+  "enterName": "ادخل اسمك",
+  "dontHaveAccount": "ليس لديك حساب؟ ",
+  "confirmPassword": "تأكيد كلمة المرور",
+  "agreeTo": "موافق على",
+  "termsAndConditions": "الشروط و الاحكام"
 }

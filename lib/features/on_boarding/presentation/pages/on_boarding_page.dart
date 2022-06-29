@@ -4,6 +4,7 @@ import 'package:gam3ity/features/on_boarding/presentation/widgets/language_butto
 import 'package:gam3ity/features/on_boarding/presentation/widgets/on_boarding_navigation_button.dart';
 import 'package:gam3ity/features/on_boarding/presentation/widgets/top_half_widget.dart';
 import 'package:gam3ity/generated/l10n.dart';
+import 'package:go_router/go_router.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class OnBoardingPage extends StatefulWidget {
@@ -30,6 +31,7 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
   Widget build(BuildContext context) {
     final List<OnBoard> boardingList = onBoardingList(context);
     return Scaffold(
+      backgroundColor: Colors.white,
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(vertical: 12),
@@ -80,41 +82,53 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
                 ),
               ),
               Expanded(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    OnBoardingNavigationButton(
-                      text: S.of(context).back,
-                      backgroundColor: const Color(0xffF4F4F4),
-                      textColor: const Color(0xff7C7C7C),
-                      onPressed: () {
-                        if(index != 0) {
-                          index--;
-                          _pageController.animateToPage(
-                            index,
-                            duration: const Duration(milliseconds: 500),
-                            curve: Curves.easeInOut,
-                          );
-                        }
-                      },
-                    ),
-                    OnBoardingNavigationButton(
-                      text: S.of(context).next,
-                      backgroundColor: Theme.of(context).primaryColor,
-                      textColor: Colors.white,
-                      start: false,
-                      onPressed: () {
-                        if (!isLast) {
-                          index++;
-                          _pageController.animateToPage(
-                            index,
-                            duration: const Duration(milliseconds: 500),
-                            curve: Curves.easeInOut,
-                          );
-                        }
-                      },
-                    ),
-                  ],
+                child: AnimatedContainer(
+                  duration: const Duration(milliseconds: 600),
+                  width: isLast ? MediaQuery.of(context).size.width * 0.8 : MediaQuery.of(context).size.width,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      OnBoardingNavigationButton(
+                        text: isLast ? S.of(context).login : S.of(context).back,
+                        backgroundColor: const Color(0xffF4F4F4),
+                        textColor: const Color(0xff7C7C7C),
+                        isLast: isLast,
+                        onPressed: () {
+                          if(!isLast) {
+                            if (index != 0) {
+                              index--;
+                              _pageController.animateToPage(
+                                index,
+                                duration: const Duration(milliseconds: 500),
+                                curve: Curves.easeInOut,
+                              );
+                            }
+                          } else {
+                            GoRouter.of(context).pushNamed('login');
+                          }
+                        },
+                      ),
+                      OnBoardingNavigationButton(
+                        text: isLast ? S.of(context).register : S.of(context).next,
+                        backgroundColor: Theme.of(context).primaryColor,
+                        textColor: Colors.white,
+                        start: false,
+                        isLast: isLast,
+                        onPressed: () {
+                          if (!isLast) {
+                            index++;
+                            _pageController.animateToPage(
+                              index,
+                              duration: const Duration(milliseconds: 500),
+                              curve: Curves.easeInOut,
+                            );
+                          } else {
+                            context.pushNamed('register');
+                          }
+                        },
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ],

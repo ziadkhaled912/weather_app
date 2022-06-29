@@ -13,5 +13,18 @@
   "onBoardingTitle3": "Customize your own circle",
   "onBoardingSubtitle1": "All circles are guaranteed because all users\nThey offer legal guarantees",
   "onBoardingSubtitle2": "You will be able to find the circle that suits you, as well\nEasily adjust payment and receivable dates",
-  "onBoardingSubtitle3": "You can create your own circle and invite your friends to it"
+  "onBoardingSubtitle3": "You can create your own circle and invite your friends to it",
+  "register": "Register",
+  "login": "Login",
+  "thisFieldIsRequired": "This field is required",
+  "mobileNumberValidation": "The number you have entered is invalid",
+  "enterPhoneNumber": "Enter Your phone number",
+  "password": "Password",
+  "enterPassword": "Enter your password",
+  "name": "Name",
+  "enterName": "Enter your name",
+  "dontHaveAccount": "Don't have account? ",
+  "confirmPassword": "Confirm Password",
+  "agreeTo": "Agree to",
+  "termsAndConditions": "terms & conditions"
 }

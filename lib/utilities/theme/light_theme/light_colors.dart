@@ -6,7 +6,7 @@ class LightColors {
   static const Color background = Colors.white;
   static const Color error = Color(0xffCF4747);
   static const Color divider = Color(0xffEBEBEB);
-  static const Color scaffoldBackgroundColor = Colors.white;
+  static const Color scaffoldBackgroundColor = Color(0xffF4F4F4);
   static const Color surface = Color(0xff92E3A9);
   static const Color onPrimary = Color(0xff92E3A9);
   static const Color onSecondary = Color(0xff74C58B);
@@ -17,6 +17,10 @@ class LightColors {
   static const Color textGray = Color(0xff7C7C7C);
 
   static Color get textFieldFilledColor => const Color(0xffF4F6FC);
+
+  static Color get successColor => const Color(0xff39AA2D);
+  static Color get errorColor => const Color(0xffFB2626);
+  static Color get warningColor => const Color(0xffFFCC00);
 }
 
 const lightColorScheme = ColorScheme(

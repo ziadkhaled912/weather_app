@@ -5,11 +5,11 @@ import 'package:gam3ity/core/constants/locales.dart';
 import 'package:gam3ity/utilities/theme/light_theme/light_colors.dart';
 
 class Gam3ityLightTheme {
-  ThemeData lightTheme({
+  static ThemeData lightTheme({
     required Locale locale,
   }) {
     return ThemeData(
-      fontFamily: locale == englishLocale? 'Poppins' : 'Inter',
+      fontFamily: locale == englishLocale ? 'Poppins' : 'Inter',
       primaryColor: LightColors.primaryColor,
       accentColor: LightColors.secondaryColor,
       indicatorColor: lightColorScheme.secondary,
@@ -62,32 +62,32 @@ class Gam3ityLightTheme {
         ),
         headline2: const TextStyle(
           fontSize: 30,
-          fontWeight: FontWeight.bold,
+          fontWeight: FontWeight.w700,
           color: LightColors.onBackground,
         ),
         headline3: const TextStyle(
           fontSize: 28,
-          fontWeight: FontWeight.bold,
+          fontWeight: FontWeight.w700,
           color: LightColors.onBackground,
         ),
         headline4: const TextStyle(
           fontSize: 26,
-          fontWeight: FontWeight.bold,
+          fontWeight: FontWeight.w700,
           color: LightColors.onBackground,
         ),
         headline5: const TextStyle(
           fontSize: 24,
-          fontWeight: FontWeight.bold,
+          fontWeight: FontWeight.w700,
           color: LightColors.onBackground,
         ),
         headline6: const TextStyle(
           fontSize: 20,
-          fontWeight: FontWeight.bold,
+          fontWeight: FontWeight.w700,
           color: LightColors.onBackground,
         ),
         bodyText1: const TextStyle(
           fontSize: 16,
-          fontWeight: FontWeight.bold,
+          fontWeight: FontWeight.w700,
           color: LightColors.onBackground,
         ),
         bodyText2: const TextStyle(
@@ -97,17 +97,17 @@ class Gam3ityLightTheme {
         ),
         subtitle2: const TextStyle(
           fontSize: 13,
-          fontWeight: FontWeight.normal,
+          fontWeight: FontWeight.w400,
           color: LightColors.onBackground,
         ),
         subtitle1: const TextStyle(
           fontSize: 14,
-          fontWeight: FontWeight.normal,
+          fontWeight: FontWeight.w400,
           color: LightColors.onBackground,
         ),
         caption: const TextStyle(
           fontSize: 12,
-          fontWeight: FontWeight.normal,
+          fontWeight: FontWeight.w400,
           color: LightColors.onBackground,
         ),
         button: TextStyle(
@@ -150,9 +150,15 @@ class Gam3ityLightTheme {
         ),
         elevation: 0,
         centerTitle: true,
-        color: lightColorScheme.primary,
+        color: LightColors.scaffoldBackgroundColor,
         actionsIconTheme: IconThemeData(
           color: lightColorScheme.onBackground,
+        ),
+        titleTextStyle: TextStyle(
+          fontSize: 16,
+          fontWeight: FontWeight.w700,
+          color: lightColorScheme.onBackground,
+          fontFamily: 'Inter',
         ),
         systemOverlayStyle: const SystemUiOverlayStyle(
           statusBarColor: Colors.transparent,

@@ -22,14 +22,27 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "agreeTo": MessageLookupByLibrary.simpleMessage("موافق على"),
         "back": MessageLookupByLibrary.simpleMessage("العودة"),
+        "confirmPassword":
+            MessageLookupByLibrary.simpleMessage("تأكيد كلمة المرور"),
         "contentError": MessageLookupByLibrary.simpleMessage(
             "هذا المحتوى غير متوفر حالياً، من فضلك حاول في وقت لاحق"),
+        "dontHaveAccount":
+            MessageLookupByLibrary.simpleMessage("ليس لديك حساب؟ "),
+        "enterName": MessageLookupByLibrary.simpleMessage("ادخل اسمك"),
+        "enterPassword": MessageLookupByLibrary.simpleMessage("ادخل كلمة مرور"),
+        "enterPhoneNumber":
+            MessageLookupByLibrary.simpleMessage("اكتب رقم الموبايل"),
         "forbiddenAccessError": MessageLookupByLibrary.simpleMessage(
             "لا تملك الصلاحيات الكافية للإطلاع"),
         "internetError": MessageLookupByLibrary.simpleMessage(
             "من فضلك تفقد إتصالك بالإنترنت"),
         "lang": MessageLookupByLibrary.simpleMessage("عربى"),
+        "login": MessageLookupByLibrary.simpleMessage("تسجيل دخول"),
+        "mobileNumberValidation": MessageLookupByLibrary.simpleMessage(
+            "رقم الهاتف الذى ادخلته غير صالح"),
+        "name": MessageLookupByLibrary.simpleMessage("اسمك"),
         "next": MessageLookupByLibrary.simpleMessage("التالى"),
         "onBoardingSubtitle1": MessageLookupByLibrary.simpleMessage(
             "كل الجمعيات مضمونة بسبب ان كل مستخدمين \nبيقدمو ضمانات قانونية"),
@@ -41,9 +54,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "onBoardingTitle2": MessageLookupByLibrary.simpleMessage("سهل"),
         "onBoardingTitle3":
             MessageLookupByLibrary.simpleMessage("ظبط جمعيتك على مزاجك"),
+        "password": MessageLookupByLibrary.simpleMessage("كلمة مرور"),
+        "register": MessageLookupByLibrary.simpleMessage("حساب جديد"),
         "serviceError": MessageLookupByLibrary.simpleMessage(
             "الخدمة غير متوفرة، من فضلك حاول في وقت لاحق"),
         "somethingWentWrong": MessageLookupByLibrary.simpleMessage(
-            "ثمة خطب ما، من فضلك حاول في وقت لاحق")
+            "ثمة خطب ما، من فضلك حاول في وقت لاحق"),
+        "termsAndConditions":
+            MessageLookupByLibrary.simpleMessage("الشروط و الاحكام"),
+        "thisFieldIsRequired":
+            MessageLookupByLibrary.simpleMessage("هذا الحقل مطلوب")
       };
 }

@@ -189,6 +189,136 @@ class S {
       args: [],
     );
   }
+
+  /// `Register`
+  String get register {
+    return Intl.message(
+      'Register',
+      name: 'register',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Login`
+  String get login {
+    return Intl.message(
+      'Login',
+      name: 'login',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `This field is required`
+  String get thisFieldIsRequired {
+    return Intl.message(
+      'This field is required',
+      name: 'thisFieldIsRequired',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The number you have entered is invalid`
+  String get mobileNumberValidation {
+    return Intl.message(
+      'The number you have entered is invalid',
+      name: 'mobileNumberValidation',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter Your phone number`
+  String get enterPhoneNumber {
+    return Intl.message(
+      'Enter Your phone number',
+      name: 'enterPhoneNumber',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password`
+  String get password {
+    return Intl.message(
+      'Password',
+      name: 'password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter your password`
+  String get enterPassword {
+    return Intl.message(
+      'Enter your password',
+      name: 'enterPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Name`
+  String get name {
+    return Intl.message(
+      'Name',
+      name: 'name',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter your name`
+  String get enterName {
+    return Intl.message(
+      'Enter your name',
+      name: 'enterName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Don't have account? `
+  String get dontHaveAccount {
+    return Intl.message(
+      'Don\'t have account? ',
+      name: 'dontHaveAccount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Confirm Password`
+  String get confirmPassword {
+    return Intl.message(
+      'Confirm Password',
+      name: 'confirmPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Agree to`
+  String get agreeTo {
+    return Intl.message(
+      'Agree to',
+      name: 'agreeTo',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `terms & conditions`
+  String get termsAndConditions {
+    return Intl.message(
+      'terms & conditions',
+      name: 'termsAndConditions',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

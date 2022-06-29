@@ -22,14 +22,28 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "agreeTo": MessageLookupByLibrary.simpleMessage("Agree to"),
         "back": MessageLookupByLibrary.simpleMessage("Back"),
+        "confirmPassword":
+            MessageLookupByLibrary.simpleMessage("Confirm Password"),
         "contentError": MessageLookupByLibrary.simpleMessage(
             "This content is unavailable currently, please try again later"),
+        "dontHaveAccount":
+            MessageLookupByLibrary.simpleMessage("Don\'t have account? "),
+        "enterName": MessageLookupByLibrary.simpleMessage("Enter your name"),
+        "enterPassword":
+            MessageLookupByLibrary.simpleMessage("Enter your password"),
+        "enterPhoneNumber":
+            MessageLookupByLibrary.simpleMessage("Enter Your phone number"),
         "forbiddenAccessError": MessageLookupByLibrary.simpleMessage(
             "You don\'t have the adequate permissions to view this."),
         "internetError": MessageLookupByLibrary.simpleMessage(
             "Please check your internet connection"),
         "lang": MessageLookupByLibrary.simpleMessage("English"),
+        "login": MessageLookupByLibrary.simpleMessage("Login"),
+        "mobileNumberValidation": MessageLookupByLibrary.simpleMessage(
+            "The number you have entered is invalid"),
+        "name": MessageLookupByLibrary.simpleMessage("Name"),
         "next": MessageLookupByLibrary.simpleMessage("Next"),
         "onBoardingSubtitle1": MessageLookupByLibrary.simpleMessage(
             "All circles are guaranteed because all users\nThey offer legal guarantees"),
@@ -41,9 +55,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "onBoardingTitle2": MessageLookupByLibrary.simpleMessage("Easy"),
         "onBoardingTitle3":
             MessageLookupByLibrary.simpleMessage("Customize your own circle"),
+        "password": MessageLookupByLibrary.simpleMessage("Password"),
+        "register": MessageLookupByLibrary.simpleMessage("Register"),
         "serviceError": MessageLookupByLibrary.simpleMessage(
             "Service unavailable, please try again later."),
         "somethingWentWrong": MessageLookupByLibrary.simpleMessage(
-            "Something went wrong, please try again later")
+            "Something went wrong, please try again later"),
+        "termsAndConditions":
+            MessageLookupByLibrary.simpleMessage("terms & conditions"),
+        "thisFieldIsRequired":
+            MessageLookupByLibrary.simpleMessage("This field is required")
       };
 }

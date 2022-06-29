@@ -41,11 +41,11 @@ class MyApp extends StatelessWidget {
               GlobalWidgetsLocalizations.delegate,
               GlobalCupertinoLocalizations.delegate,
             ],
-            routeInformationProvider: router().routeInformationProvider,
-            routeInformationParser: router().routeInformationParser,
-            routerDelegate: router().routerDelegate,
+            routeInformationProvider: router.routeInformationProvider,
+            routeInformationParser: router.routeInformationParser,
+            routerDelegate: router.routerDelegate,
             locale: BlocProvider.of<ThemeCubit>(context).locale,
-            theme: Gam3ityLightTheme().lightTheme(
+            theme: Gam3ityLightTheme.lightTheme(
               locale: BlocProvider.of<ThemeCubit>(context).locale,
             ),
           );
