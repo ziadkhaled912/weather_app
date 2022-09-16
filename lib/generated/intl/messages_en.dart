@@ -30,6 +30,9 @@ class MessageLookup extends MessageLookupByLibrary {
             "This content is unavailable currently, please try again later"),
         "dontHaveAccount":
             MessageLookupByLibrary.simpleMessage("Don\'t have account? "),
+        "email": MessageLookupByLibrary.simpleMessage("Email Address"),
+        "emailValidation":
+            MessageLookupByLibrary.simpleMessage("Invalid Email"),
         "enterName": MessageLookupByLibrary.simpleMessage("Enter your name"),
         "enterPassword":
             MessageLookupByLibrary.simpleMessage("Enter your password"),
@@ -45,6 +48,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "The number you have entered is invalid"),
         "name": MessageLookupByLibrary.simpleMessage("Name"),
         "next": MessageLookupByLibrary.simpleMessage("Next"),
+        "no_internet": MessageLookupByLibrary.simpleMessage(
+            "You don\'t have internet connection, Please connect with the internet and try again"),
         "onBoardingSubtitle1": MessageLookupByLibrary.simpleMessage(
             "All circles are guaranteed because all users\nThey offer legal guarantees"),
         "onBoardingSubtitle2": MessageLookupByLibrary.simpleMessage(
@@ -61,9 +66,15 @@ class MessageLookup extends MessageLookupByLibrary {
             "Service unavailable, please try again later."),
         "somethingWentWrong": MessageLookupByLibrary.simpleMessage(
             "Something went wrong, please try again later"),
+        "successfully_logged_in":
+            MessageLookupByLibrary.simpleMessage("Successfully logged in"),
         "termsAndConditions":
             MessageLookupByLibrary.simpleMessage("terms & conditions"),
+        "theEmailIsUsedBefore": MessageLookupByLibrary.simpleMessage(
+            "The email you have entered is already in use"),
         "thisFieldIsRequired":
-            MessageLookupByLibrary.simpleMessage("This field is required")
+            MessageLookupByLibrary.simpleMessage("This field is required"),
+        "userNotFound": MessageLookupByLibrary.simpleMessage(
+            "The email address you entered is not found please register")
       };
 }

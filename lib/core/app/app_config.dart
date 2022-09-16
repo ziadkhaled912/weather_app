@@ -1,4 +1,4 @@
-import 'package:gam3ity/core/app/config_reader.dart';
+import 'package:weather_app/core/app/config_reader.dart';
 import 'package:injectable/injectable.dart';
 
 @lazySingleton

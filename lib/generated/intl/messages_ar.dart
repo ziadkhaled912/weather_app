@@ -30,6 +30,9 @@ class MessageLookup extends MessageLookupByLibrary {
             "هذا المحتوى غير متوفر حالياً، من فضلك حاول في وقت لاحق"),
         "dontHaveAccount":
             MessageLookupByLibrary.simpleMessage("ليس لديك حساب؟ "),
+        "email": MessageLookupByLibrary.simpleMessage("البريد الالكتروني"),
+        "emailValidation": MessageLookupByLibrary.simpleMessage(
+            "يجب أن يكون البريد الالكتروني صحيحًا"),
         "enterName": MessageLookupByLibrary.simpleMessage("ادخل اسمك"),
         "enterPassword": MessageLookupByLibrary.simpleMessage("ادخل كلمة مرور"),
         "enterPhoneNumber":
@@ -44,6 +47,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "رقم الهاتف الذى ادخلته غير صالح"),
         "name": MessageLookupByLibrary.simpleMessage("اسمك"),
         "next": MessageLookupByLibrary.simpleMessage("التالى"),
+        "no_internet": MessageLookupByLibrary.simpleMessage(
+            "انت غير متصل بالانترنت برجاء الإتصال و إعادة المحاولة"),
         "onBoardingSubtitle1": MessageLookupByLibrary.simpleMessage(
             "كل الجمعيات مضمونة بسبب ان كل مستخدمين \nبيقدمو ضمانات قانونية"),
         "onBoardingSubtitle2": MessageLookupByLibrary.simpleMessage(
@@ -62,7 +67,11 @@ class MessageLookup extends MessageLookupByLibrary {
             "ثمة خطب ما، من فضلك حاول في وقت لاحق"),
         "termsAndConditions":
             MessageLookupByLibrary.simpleMessage("الشروط و الاحكام"),
+        "theEmailIsUsedBefore": MessageLookupByLibrary.simpleMessage(
+            "البريد الاكترونى الذى ادخلته مستخدم من قبل"),
         "thisFieldIsRequired":
-            MessageLookupByLibrary.simpleMessage("هذا الحقل مطلوب")
+            MessageLookupByLibrary.simpleMessage("هذا الحقل مطلوب"),
+        "userNotFound": MessageLookupByLibrary.simpleMessage(
+            "البريد الالكتروني الذى استخدمته غير موجود")
       };
 }

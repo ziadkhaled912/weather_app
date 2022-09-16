@@ -7,12 +7,14 @@ class CustomScaffold extends StatelessWidget {
     this.leading,
     this.actions,
     required this.child,
+    this.padding = const EdgeInsets.symmetric(vertical: 22, horizontal: 16),
   }) : super(key: key);
 
   final String title;
   final Widget? leading;
   final List<Widget>? actions;
   final Widget child;
+  final EdgeInsets padding;
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +26,7 @@ class CustomScaffold extends StatelessWidget {
       ),
       body: Container(
         clipBehavior: Clip.antiAliasWithSaveLayer,
-        padding: const EdgeInsets.symmetric(vertical: 22, horizontal: 16),
+        padding: padding,
         decoration: const BoxDecoration(
           borderRadius: BorderRadius.vertical(
             top: Radius.circular(20),

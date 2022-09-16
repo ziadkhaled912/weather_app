@@ -3,13 +3,13 @@ import 'package:country_code_picker/country_code_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:gam3ity/core/constants/locales.dart';
-import 'package:gam3ity/core/extensions/string.dart';
-import 'package:gam3ity/core/domain/validation/phone_number_validator.dart';
-import 'package:gam3ity/core/presentation/widgets/country_code_picker_button.dart';
-import 'package:gam3ity/generated/l10n.dart';
-import 'package:gam3ity/utilities/theme/cubit/theme_cubit.dart';
-import 'package:gam3ity/utilities/theme/light_theme/light_colors.dart';
+import 'package:weather_app/core/constants/locales.dart';
+import 'package:weather_app/core/extensions/string.dart';
+import 'package:weather_app/core/domain/validation/phone_number_validator.dart';
+import 'package:weather_app/core/presentation/widgets/country_code_picker_button.dart';
+import 'package:weather_app/generated/l10n.dart';
+import 'package:weather_app/utilities/theme/cubit/theme_cubit.dart';
+import 'package:weather_app/utilities/theme/light_theme/light_colors.dart';
 
 class MobileNumberTextField extends StatefulWidget {
   final TextEditingController editingController;

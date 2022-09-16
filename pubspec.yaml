@@ -1,4 +1,4 @@
-name: gam3ity
+name: weather_app
 description: A new Flutter project.
 
 publish_to: 'none'
@@ -12,9 +12,16 @@ dependencies:
   flutter:
     sdk: flutter
 
+  # Firebase
+  firebase_auth: ^3.4.1
+  firebase_core: ^1.19.1
+  cloud_firestore: ^3.4.8
+
   # Network
   dio: ^4.0.6
   shared_preferences: ^2.0.15
+  retrofit: '>=3.0.0 <4.0.0'
+  logger: any  #for logging purpose
 
   # dependency injection
   get_it: ^7.2.0
@@ -36,18 +43,22 @@ dependencies:
   smooth_page_indicator: ^1.0.0+2
   country_code_picker: ^2.0.2
   phone_number: ^0.12.0+2
+  dartz: ^0.10.1
+  internet_connection_checker: ^0.0.1+4
+  intl: ^0.17.0
+  geolocator: ^9.0.1
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-
-  intl: ^0.17.0
 
   injectable_generator:
 
   flutter_lints: ^2.0.0
   build_runner: ^2.1.11
   freezed: ^2.0.3+1
+  retrofit_generator: '>=4.0.0 <5.0.0'
+  json_serializable: '>4.4.0'
 
 flutter_intl:
   enabled: true

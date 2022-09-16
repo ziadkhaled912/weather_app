@@ -1,6 +1,6 @@
 import 'package:dio/dio.dart';
-import 'package:gam3ity/core/data/error/exceptions/server_exception.dart';
-import 'package:gam3ity/generated/l10n.dart';
+import 'package:weather_app/core/data/error/exceptions/server_exception.dart';
+import 'package:weather_app/generated/l10n.dart';
 
 import 'client_exception.dart';
 
@@ -54,8 +54,6 @@ void decodeClientErrors(DioError e, {String resourceName = ''}) {
         resourceName: resourceName,
         message: S.current.contentError,
       );
-    case 423:
-      throw const ClientException.inactiveProfile();
     case 400:
       final response = e.response!.data['errorMessages'];
       final buffer = StringBuffer();

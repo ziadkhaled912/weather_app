@@ -60,6 +60,16 @@ class S {
     );
   }
 
+  /// `You don't have internet connection, Please connect with the internet and try again`
+  String get no_internet {
+    return Intl.message(
+      'You don\'t have internet connection, Please connect with the internet and try again',
+      name: 'no_internet',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Service unavailable, please try again later.`
   String get serviceError {
     return Intl.message(
@@ -315,6 +325,56 @@ class S {
     return Intl.message(
       'terms & conditions',
       name: 'termsAndConditions',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The email you have entered is already in use`
+  String get theEmailIsUsedBefore {
+    return Intl.message(
+      'The email you have entered is already in use',
+      name: 'theEmailIsUsedBefore',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Invalid Email`
+  String get emailValidation {
+    return Intl.message(
+      'Invalid Email',
+      name: 'emailValidation',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Email Address`
+  String get email {
+    return Intl.message(
+      'Email Address',
+      name: 'email',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The email address you entered is not found please register`
+  String get userNotFound {
+    return Intl.message(
+      'The email address you entered is not found please register',
+      name: 'userNotFound',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Successfully logged in`
+  String get successfully_logged_in {
+    return Intl.message(
+      'Successfully logged in',
+      name: 'successfully_logged_in',
       desc: '',
       args: [],
     );

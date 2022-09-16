@@ -1,7 +1,7 @@
 // ignore_for_file: depend_on_referenced_packages
 
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:gam3ity/core/data/error/exceptions/application_exception.dart';
+import 'package:weather_app/core/data/error/exceptions/application_exception.dart';
 
 part 'client_exception.freezed.dart';
 
@@ -28,5 +28,4 @@ abstract class ClientException extends ApplicationException
 
   const factory ClientException.badRequest({required String message}) =
       BadRequest;
-  const factory ClientException.inactiveProfile() = InactiveProfile;
 }

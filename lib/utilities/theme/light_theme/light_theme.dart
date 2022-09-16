@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:gam3ity/core/constants/locales.dart';
-import 'package:gam3ity/utilities/theme/light_theme/light_colors.dart';
+import 'package:weather_app/core/constants/locales.dart';
+import 'package:weather_app/utilities/theme/light_theme/light_colors.dart';
 
 class Gam3ityLightTheme {
   static ThemeData lightTheme({

@@ -1,6 +1,6 @@
 // ignore: depend_on_referenced_packages
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:gam3ity/core/data/error/exceptions/application_exception.dart';
+import 'package:weather_app/core/data/error/exceptions/application_exception.dart';
 
 part 'server_exception.freezed.dart';
 

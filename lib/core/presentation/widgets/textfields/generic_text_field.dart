@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:gam3ity/generated/l10n.dart';
+import 'package:weather_app/generated/l10n.dart';
 
 class GenericTextField extends StatelessWidget {
   final TextEditingController? controller;

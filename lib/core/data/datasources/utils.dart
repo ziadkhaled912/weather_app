@@ -2,8 +2,8 @@ import 'dart:developer';
 
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
-import 'package:gam3ity/core/data/error/exceptions/application_exception.dart';
-import 'package:gam3ity/generated/l10n.dart';
+import 'package:weather_app/core/data/error/exceptions/application_exception.dart';
+import 'package:weather_app/generated/l10n.dart';
 import 'package:logging/logging.dart';
 
 Future<T> resolveOrThrow<T>(

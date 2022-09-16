@@ -2,10 +2,10 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:gam3ity/core/constants/cache_keys.dart';
-import 'package:gam3ity/core/constants/locales.dart';
-import 'package:gam3ity/core/data/datasources/cache_helper.dart';
-import 'package:gam3ity/di/injection_container.dart';
+import 'package:weather_app/core/constants/cache_keys.dart';
+import 'package:weather_app/core/constants/locales.dart';
+import 'package:weather_app/core/data/datasources/cache_helper.dart';
+import 'package:weather_app/di/injection_container.dart';
 
 import 'theme_state.dart';
 

@@ -26,7 +26,6 @@ mixin _$ClientException {
     required TResult Function(String message) networkError,
     required TResult Function(String message) cacheError,
     required TResult Function(String message) badRequest,
-    required TResult Function() inactiveProfile,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -38,7 +37,6 @@ mixin _$ClientException {
     TResult Function(String message)? networkError,
     TResult Function(String message)? cacheError,
     TResult Function(String message)? badRequest,
-    TResult Function()? inactiveProfile,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -50,7 +48,6 @@ mixin _$ClientException {
     TResult Function(String message)? networkError,
     TResult Function(String message)? cacheError,
     TResult Function(String message)? badRequest,
-    TResult Function()? inactiveProfile,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -63,7 +60,6 @@ mixin _$ClientException {
     required TResult Function(NetworkError value) networkError,
     required TResult Function(CacheError value) cacheError,
     required TResult Function(BadRequest value) badRequest,
-    required TResult Function(InactiveProfile value) inactiveProfile,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -75,7 +71,6 @@ mixin _$ClientException {
     TResult Function(NetworkError value)? networkError,
     TResult Function(CacheError value)? cacheError,
     TResult Function(BadRequest value)? badRequest,
-    TResult Function(InactiveProfile value)? inactiveProfile,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -87,7 +82,6 @@ mixin _$ClientException {
     TResult Function(NetworkError value)? networkError,
     TResult Function(CacheError value)? cacheError,
     TResult Function(BadRequest value)? badRequest,
-    TResult Function(InactiveProfile value)? inactiveProfile,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -180,7 +174,6 @@ class _$Unknown implements Unknown {
     required TResult Function(String message) networkError,
     required TResult Function(String message) cacheError,
     required TResult Function(String message) badRequest,
-    required TResult Function() inactiveProfile,
   }) {
     return unknown(message);
   }
@@ -195,7 +188,6 @@ class _$Unknown implements Unknown {
     TResult Function(String message)? networkError,
     TResult Function(String message)? cacheError,
     TResult Function(String message)? badRequest,
-    TResult Function()? inactiveProfile,
   }) {
     return unknown?.call(message);
   }
@@ -210,7 +202,6 @@ class _$Unknown implements Unknown {
     TResult Function(String message)? networkError,
     TResult Function(String message)? cacheError,
     TResult Function(String message)? badRequest,
-    TResult Function()? inactiveProfile,
     required TResult orElse(),
   }) {
     if (unknown != null) {
@@ -229,7 +220,6 @@ class _$Unknown implements Unknown {
     required TResult Function(NetworkError value) networkError,
     required TResult Function(CacheError value) cacheError,
     required TResult Function(BadRequest value) badRequest,
-    required TResult Function(InactiveProfile value) inactiveProfile,
   }) {
     return unknown(this);
   }
@@ -244,7 +234,6 @@ class _$Unknown implements Unknown {
     TResult Function(NetworkError value)? networkError,
     TResult Function(CacheError value)? cacheError,
     TResult Function(BadRequest value)? badRequest,
-    TResult Function(InactiveProfile value)? inactiveProfile,
   }) {
     return unknown?.call(this);
   }
@@ -259,7 +248,6 @@ class _$Unknown implements Unknown {
     TResult Function(NetworkError value)? networkError,
     TResult Function(CacheError value)? cacheError,
     TResult Function(BadRequest value)? badRequest,
-    TResult Function(InactiveProfile value)? inactiveProfile,
     required TResult orElse(),
   }) {
     if (unknown != null) {
@@ -362,7 +350,6 @@ class _$ResourceNotFound implements ResourceNotFound {
     required TResult Function(String message) networkError,
     required TResult Function(String message) cacheError,
     required TResult Function(String message) badRequest,
-    required TResult Function() inactiveProfile,
   }) {
     return resourceNotFound(resourceName, message);
   }
@@ -377,7 +364,6 @@ class _$ResourceNotFound implements ResourceNotFound {
     TResult Function(String message)? networkError,
     TResult Function(String message)? cacheError,
     TResult Function(String message)? badRequest,
-    TResult Function()? inactiveProfile,
   }) {
     return resourceNotFound?.call(resourceName, message);
   }
@@ -392,7 +378,6 @@ class _$ResourceNotFound implements ResourceNotFound {
     TResult Function(String message)? networkError,
     TResult Function(String message)? cacheError,
     TResult Function(String message)? badRequest,
-    TResult Function()? inactiveProfile,
     required TResult orElse(),
   }) {
     if (resourceNotFound != null) {
@@ -411,7 +396,6 @@ class _$ResourceNotFound implements ResourceNotFound {
     required TResult Function(NetworkError value) networkError,
     required TResult Function(CacheError value) cacheError,
     required TResult Function(BadRequest value) badRequest,
-    required TResult Function(InactiveProfile value) inactiveProfile,
   }) {
     return resourceNotFound(this);
   }
@@ -426,7 +410,6 @@ class _$ResourceNotFound implements ResourceNotFound {
     TResult Function(NetworkError value)? networkError,
     TResult Function(CacheError value)? cacheError,
     TResult Function(BadRequest value)? badRequest,
-    TResult Function(InactiveProfile value)? inactiveProfile,
   }) {
     return resourceNotFound?.call(this);
   }
@@ -441,7 +424,6 @@ class _$ResourceNotFound implements ResourceNotFound {
     TResult Function(NetworkError value)? networkError,
     TResult Function(CacheError value)? cacheError,
     TResult Function(BadRequest value)? badRequest,
-    TResult Function(InactiveProfile value)? inactiveProfile,
     required TResult orElse(),
   }) {
     if (resourceNotFound != null) {
@@ -512,7 +494,6 @@ class _$UnAuthorizedAccess implements UnAuthorizedAccess {
     required TResult Function(String message) networkError,
     required TResult Function(String message) cacheError,
     required TResult Function(String message) badRequest,
-    required TResult Function() inactiveProfile,
   }) {
     return unauthorizedAccess();
   }
@@ -527,7 +508,6 @@ class _$UnAuthorizedAccess implements UnAuthorizedAccess {
     TResult Function(String message)? networkError,
     TResult Function(String message)? cacheError,
     TResult Function(String message)? badRequest,
-    TResult Function()? inactiveProfile,
   }) {
     return unauthorizedAccess?.call();
   }
@@ -542,7 +522,6 @@ class _$UnAuthorizedAccess implements UnAuthorizedAccess {
     TResult Function(String message)? networkError,
     TResult Function(String message)? cacheError,
     TResult Function(String message)? badRequest,
-    TResult Function()? inactiveProfile,
     required TResult orElse(),
   }) {
     if (unauthorizedAccess != null) {
@@ -561,7 +540,6 @@ class _$UnAuthorizedAccess implements UnAuthorizedAccess {
     required TResult Function(NetworkError value) networkError,
     required TResult Function(CacheError value) cacheError,
     required TResult Function(BadRequest value) badRequest,
-    required TResult Function(InactiveProfile value) inactiveProfile,
   }) {
     return unauthorizedAccess(this);
   }
@@ -576,7 +554,6 @@ class _$UnAuthorizedAccess implements UnAuthorizedAccess {
     TResult Function(NetworkError value)? networkError,
     TResult Function(CacheError value)? cacheError,
     TResult Function(BadRequest value)? badRequest,
-    TResult Function(InactiveProfile value)? inactiveProfile,
   }) {
     return unauthorizedAccess?.call(this);
   }
@@ -591,7 +568,6 @@ class _$UnAuthorizedAccess implements UnAuthorizedAccess {
     TResult Function(NetworkError value)? networkError,
     TResult Function(CacheError value)? cacheError,
     TResult Function(BadRequest value)? badRequest,
-    TResult Function(InactiveProfile value)? inactiveProfile,
     required TResult orElse(),
   }) {
     if (unauthorizedAccess != null) {
@@ -678,7 +654,6 @@ class _$ForbiddenAccess implements ForbiddenAccess {
     required TResult Function(String message) networkError,
     required TResult Function(String message) cacheError,
     required TResult Function(String message) badRequest,
-    required TResult Function() inactiveProfile,
   }) {
     return forbiddenAccess(message);
   }
@@ -693,7 +668,6 @@ class _$ForbiddenAccess implements ForbiddenAccess {
     TResult Function(String message)? networkError,
     TResult Function(String message)? cacheError,
     TResult Function(String message)? badRequest,
-    TResult Function()? inactiveProfile,
   }) {
     return forbiddenAccess?.call(message);
   }
@@ -708,7 +682,6 @@ class _$ForbiddenAccess implements ForbiddenAccess {
     TResult Function(String message)? networkError,
     TResult Function(String message)? cacheError,
     TResult Function(String message)? badRequest,
-    TResult Function()? inactiveProfile,
     required TResult orElse(),
   }) {
     if (forbiddenAccess != null) {
@@ -727,7 +700,6 @@ class _$ForbiddenAccess implements ForbiddenAccess {
     required TResult Function(NetworkError value) networkError,
     required TResult Function(CacheError value) cacheError,
     required TResult Function(BadRequest value) badRequest,
-    required TResult Function(InactiveProfile value) inactiveProfile,
   }) {
     return forbiddenAccess(this);
   }
@@ -742,7 +714,6 @@ class _$ForbiddenAccess implements ForbiddenAccess {
     TResult Function(NetworkError value)? networkError,
     TResult Function(CacheError value)? cacheError,
     TResult Function(BadRequest value)? badRequest,
-    TResult Function(InactiveProfile value)? inactiveProfile,
   }) {
     return forbiddenAccess?.call(this);
   }
@@ -757,7 +728,6 @@ class _$ForbiddenAccess implements ForbiddenAccess {
     TResult Function(NetworkError value)? networkError,
     TResult Function(CacheError value)? cacheError,
     TResult Function(BadRequest value)? badRequest,
-    TResult Function(InactiveProfile value)? inactiveProfile,
     required TResult orElse(),
   }) {
     if (forbiddenAccess != null) {
@@ -850,7 +820,6 @@ class _$NetworkError implements NetworkError {
     required TResult Function(String message) networkError,
     required TResult Function(String message) cacheError,
     required TResult Function(String message) badRequest,
-    required TResult Function() inactiveProfile,
   }) {
     return networkError(message);
   }
@@ -865,7 +834,6 @@ class _$NetworkError implements NetworkError {
     TResult Function(String message)? networkError,
     TResult Function(String message)? cacheError,
     TResult Function(String message)? badRequest,
-    TResult Function()? inactiveProfile,
   }) {
     return networkError?.call(message);
   }
@@ -880,7 +848,6 @@ class _$NetworkError implements NetworkError {
     TResult Function(String message)? networkError,
     TResult Function(String message)? cacheError,
     TResult Function(String message)? badRequest,
-    TResult Function()? inactiveProfile,
     required TResult orElse(),
   }) {
     if (networkError != null) {
@@ -899,7 +866,6 @@ class _$NetworkError implements NetworkError {
     required TResult Function(NetworkError value) networkError,
     required TResult Function(CacheError value) cacheError,
     required TResult Function(BadRequest value) badRequest,
-    required TResult Function(InactiveProfile value) inactiveProfile,
   }) {
     return networkError(this);
   }
@@ -914,7 +880,6 @@ class _$NetworkError implements NetworkError {
     TResult Function(NetworkError value)? networkError,
     TResult Function(CacheError value)? cacheError,
     TResult Function(BadRequest value)? badRequest,
-    TResult Function(InactiveProfile value)? inactiveProfile,
   }) {
     return networkError?.call(this);
   }
@@ -929,7 +894,6 @@ class _$NetworkError implements NetworkError {
     TResult Function(NetworkError value)? networkError,
     TResult Function(CacheError value)? cacheError,
     TResult Function(BadRequest value)? badRequest,
-    TResult Function(InactiveProfile value)? inactiveProfile,
     required TResult orElse(),
   }) {
     if (networkError != null) {
@@ -1021,7 +985,6 @@ class _$CacheError implements CacheError {
     required TResult Function(String message) networkError,
     required TResult Function(String message) cacheError,
     required TResult Function(String message) badRequest,
-    required TResult Function() inactiveProfile,
   }) {
     return cacheError(message);
   }
@@ -1036,7 +999,6 @@ class _$CacheError implements CacheError {
     TResult Function(String message)? networkError,
     TResult Function(String message)? cacheError,
     TResult Function(String message)? badRequest,
-    TResult Function()? inactiveProfile,
   }) {
     return cacheError?.call(message);
   }
@@ -1051,7 +1013,6 @@ class _$CacheError implements CacheError {
     TResult Function(String message)? networkError,
     TResult Function(String message)? cacheError,
     TResult Function(String message)? badRequest,
-    TResult Function()? inactiveProfile,
     required TResult orElse(),
   }) {
     if (cacheError != null) {
@@ -1070,7 +1031,6 @@ class _$CacheError implements CacheError {
     required TResult Function(NetworkError value) networkError,
     required TResult Function(CacheError value) cacheError,
     required TResult Function(BadRequest value) badRequest,
-    required TResult Function(InactiveProfile value) inactiveProfile,
   }) {
     return cacheError(this);
   }
@@ -1085,7 +1045,6 @@ class _$CacheError implements CacheError {
     TResult Function(NetworkError value)? networkError,
     TResult Function(CacheError value)? cacheError,
     TResult Function(BadRequest value)? badRequest,
-    TResult Function(InactiveProfile value)? inactiveProfile,
   }) {
     return cacheError?.call(this);
   }
@@ -1100,7 +1059,6 @@ class _$CacheError implements CacheError {
     TResult Function(NetworkError value)? networkError,
     TResult Function(CacheError value)? cacheError,
     TResult Function(BadRequest value)? badRequest,
-    TResult Function(InactiveProfile value)? inactiveProfile,
     required TResult orElse(),
   }) {
     if (cacheError != null) {
@@ -1192,7 +1150,6 @@ class _$BadRequest implements BadRequest {
     required TResult Function(String message) networkError,
     required TResult Function(String message) cacheError,
     required TResult Function(String message) badRequest,
-    required TResult Function() inactiveProfile,
   }) {
     return badRequest(message);
   }
@@ -1207,7 +1164,6 @@ class _$BadRequest implements BadRequest {
     TResult Function(String message)? networkError,
     TResult Function(String message)? cacheError,
     TResult Function(String message)? badRequest,
-    TResult Function()? inactiveProfile,
   }) {
     return badRequest?.call(message);
   }
@@ -1222,7 +1178,6 @@ class _$BadRequest implements BadRequest {
     TResult Function(String message)? networkError,
     TResult Function(String message)? cacheError,
     TResult Function(String message)? badRequest,
-    TResult Function()? inactiveProfile,
     required TResult orElse(),
   }) {
     if (badRequest != null) {
@@ -1241,7 +1196,6 @@ class _$BadRequest implements BadRequest {
     required TResult Function(NetworkError value) networkError,
     required TResult Function(CacheError value) cacheError,
     required TResult Function(BadRequest value) badRequest,
-    required TResult Function(InactiveProfile value) inactiveProfile,
   }) {
     return badRequest(this);
   }
@@ -1256,7 +1210,6 @@ class _$BadRequest implements BadRequest {
     TResult Function(NetworkError value)? networkError,
     TResult Function(CacheError value)? cacheError,
     TResult Function(BadRequest value)? badRequest,
-    TResult Function(InactiveProfile value)? inactiveProfile,
   }) {
     return badRequest?.call(this);
   }
@@ -1271,7 +1224,6 @@ class _$BadRequest implements BadRequest {
     TResult Function(NetworkError value)? networkError,
     TResult Function(CacheError value)? cacheError,
     TResult Function(BadRequest value)? badRequest,
-    TResult Function(InactiveProfile value)? inactiveProfile,
     required TResult orElse(),
   }) {
     if (badRequest != null) {
@@ -1288,146 +1240,4 @@ abstract class BadRequest implements ClientException {
   @JsonKey(ignore: true)
   _$$BadRequestCopyWith<_$BadRequest> get copyWith =>
       throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$InactiveProfileCopyWith<$Res> {
-  factory _$$InactiveProfileCopyWith(
-          _$InactiveProfile value, $Res Function(_$InactiveProfile) then) =
-      __$$InactiveProfileCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$InactiveProfileCopyWithImpl<$Res>
-    extends _$ClientExceptionCopyWithImpl<$Res>
-    implements _$$InactiveProfileCopyWith<$Res> {
-  __$$InactiveProfileCopyWithImpl(
-      _$InactiveProfile _value, $Res Function(_$InactiveProfile) _then)
-      : super(_value, (v) => _then(v as _$InactiveProfile));
-
-  @override
-  _$InactiveProfile get _value => super._value as _$InactiveProfile;
-}
-
-/// @nodoc
-
-class _$InactiveProfile implements InactiveProfile {
-  const _$InactiveProfile();
-
-  @override
-  String toString() {
-    return 'ClientException.inactiveProfile()';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$InactiveProfile);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(String message) unknown,
-    required TResult Function(String resourceName, String message)
-        resourceNotFound,
-    required TResult Function() unauthorizedAccess,
-    required TResult Function(String message) forbiddenAccess,
-    required TResult Function(String message) networkError,
-    required TResult Function(String message) cacheError,
-    required TResult Function(String message) badRequest,
-    required TResult Function() inactiveProfile,
-  }) {
-    return inactiveProfile();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(String message)? unknown,
-    TResult Function(String resourceName, String message)? resourceNotFound,
-    TResult Function()? unauthorizedAccess,
-    TResult Function(String message)? forbiddenAccess,
-    TResult Function(String message)? networkError,
-    TResult Function(String message)? cacheError,
-    TResult Function(String message)? badRequest,
-    TResult Function()? inactiveProfile,
-  }) {
-    return inactiveProfile?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String message)? unknown,
-    TResult Function(String resourceName, String message)? resourceNotFound,
-    TResult Function()? unauthorizedAccess,
-    TResult Function(String message)? forbiddenAccess,
-    TResult Function(String message)? networkError,
-    TResult Function(String message)? cacheError,
-    TResult Function(String message)? badRequest,
-    TResult Function()? inactiveProfile,
-    required TResult orElse(),
-  }) {
-    if (inactiveProfile != null) {
-      return inactiveProfile();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(Unknown value) unknown,
-    required TResult Function(ResourceNotFound value) resourceNotFound,
-    required TResult Function(UnAuthorizedAccess value) unauthorizedAccess,
-    required TResult Function(ForbiddenAccess value) forbiddenAccess,
-    required TResult Function(NetworkError value) networkError,
-    required TResult Function(CacheError value) cacheError,
-    required TResult Function(BadRequest value) badRequest,
-    required TResult Function(InactiveProfile value) inactiveProfile,
-  }) {
-    return inactiveProfile(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(Unknown value)? unknown,
-    TResult Function(ResourceNotFound value)? resourceNotFound,
-    TResult Function(UnAuthorizedAccess value)? unauthorizedAccess,
-    TResult Function(ForbiddenAccess value)? forbiddenAccess,
-    TResult Function(NetworkError value)? networkError,
-    TResult Function(CacheError value)? cacheError,
-    TResult Function(BadRequest value)? badRequest,
-    TResult Function(InactiveProfile value)? inactiveProfile,
-  }) {
-    return inactiveProfile?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(Unknown value)? unknown,
-    TResult Function(ResourceNotFound value)? resourceNotFound,
-    TResult Function(UnAuthorizedAccess value)? unauthorizedAccess,
-    TResult Function(ForbiddenAccess value)? forbiddenAccess,
-    TResult Function(NetworkError value)? networkError,
-    TResult Function(CacheError value)? cacheError,
-    TResult Function(BadRequest value)? badRequest,
-    TResult Function(InactiveProfile value)? inactiveProfile,
-    required TResult orElse(),
-  }) {
-    if (inactiveProfile != null) {
-      return inactiveProfile(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class InactiveProfile implements ClientException {
-  const factory InactiveProfile() = _$InactiveProfile;
 }

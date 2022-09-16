@@ -1,19 +1,21 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:gam3ity/core/app/config_reader.dart';
-import 'package:gam3ity/core/presentation/cubit/bloc_observer.dart';
-import 'package:gam3ity/utilities/router.dart';
-import 'package:gam3ity/utilities/theme/cubit/theme_cubit.dart';
-import 'package:gam3ity/utilities/theme/cubit/theme_state.dart';
-import 'package:gam3ity/di/injection_container.dart' as di;
-import 'package:gam3ity/utilities/theme/light_theme/light_theme.dart';
+import 'package:weather_app/core/app/config_reader.dart';
+import 'package:weather_app/core/presentation/cubit/bloc_observer.dart';
+import 'package:weather_app/utilities/router.dart';
+import 'package:weather_app/utilities/theme/cubit/theme_cubit.dart';
+import 'package:weather_app/utilities/theme/cubit/theme_state.dart';
+import 'package:weather_app/di/injection_container.dart' as di;
+import 'package:weather_app/utilities/theme/light_theme/light_theme.dart';
+import 'firebase_options.dart';
 import 'generated/l10n.dart';
 
 void main() async {
   await BlocOverrides.runZoned(
-    () async {
+        () async {
       await initialize();
       preventLandscape();
       runApp(const MyApp());
@@ -65,4 +67,7 @@ Future<void> initialize() async {
   WidgetsFlutterBinding.ensureInitialized();
   await ConfigReader.initialize();
   await di.configure();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
 }

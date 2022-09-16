@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:gam3ity/features/auth/login/presentation/pages/login.dart';
-import 'package:gam3ity/features/auth/register/presentation/pages/register_page.dart';
+import 'package:weather_app/features/auth/login/presentation/pages/login.dart';
+import 'package:weather_app/features/auth/register/presentation/pages/register_page.dart';
 import 'package:go_router/go_router.dart';
+import 'package:weather_app/features/auth/splash/presentation/pages/splash_page.dart';
+import 'package:weather_app/features/home/presentation/pages/home_page.dart';
 
-import '../features/on_boarding/presentation/pages/on_boarding_page.dart';
 
 final router = GoRouter(
   // initialLocation: initialLocation,
@@ -16,7 +17,7 @@ final router = GoRouter(
     GoRoute(
       path: '/',
       builder: (BuildContext context, GoRouterState state) =>
-          const OnBoardingPage(),
+          const SplashPage(),
     ),
     GoRoute(
       path: '/login',
@@ -27,6 +28,11 @@ final router = GoRouter(
       path: '/register',
       name: 'register',
       builder: (BuildContext context, GoRouterState state) => const RegisterPage(),
+    ),
+    GoRoute(
+      path: '/home',
+      name: 'home',
+      builder: (BuildContext context, GoRouterState state) => const HomePage(),
     ),
   ],
 );

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:gam3ity/generated/l10n.dart';
-import 'package:gam3ity/utilities/theme/light_theme/light_colors.dart';
+import 'package:weather_app/generated/l10n.dart';
+import 'package:weather_app/utilities/theme/light_theme/light_colors.dart';
 
 class CheckboxFormField extends FormField<bool> {
   CheckboxFormField({

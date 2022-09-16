@@ -1,5 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:gam3ity/core/data/error/failures/failure.dart';
+import 'package:weather_app/core/data/error/failures/failure.dart';
 
 part 'client_failure.freezed.dart';
 
@@ -20,14 +20,11 @@ abstract class ClientFailure extends Failure with _$ClientFailure {
       @Default(false) bool isAction}) = ForbiddenAccess;
 
   const factory ClientFailure.unauthorizedAccess(
-      {@Default(false) bool isAction}) = UnAuthorizedAccess;
+      {required String message, @Default(false) bool isAction}) = UnAuthorizedAccess;
 
   const factory ClientFailure.networkError(
       {required String message, @Default(false) bool isAction}) = NetworkError;
 
   const factory ClientFailure.cacheError(
       {required String message, @Default(false) bool isAction}) = CacheError;
-
-  const factory ClientFailure.inactiveUserProfile(
-      {@Default(false) bool isAction}) = InactiveProfile;
 }

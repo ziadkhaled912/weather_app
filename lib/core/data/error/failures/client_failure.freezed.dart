@@ -16,6 +16,7 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$ClientFailure {
+  String get message => throw _privateConstructorUsedError;
   bool get isAction => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
@@ -23,10 +24,9 @@ mixin _$ClientFailure {
     required TResult Function(String message, bool isAction) resourceNotFound,
     required TResult Function(String message, bool isAction) badRequest,
     required TResult Function(String message, bool isAction) forbiddenAccess,
-    required TResult Function(bool isAction) unauthorizedAccess,
+    required TResult Function(String message, bool isAction) unauthorizedAccess,
     required TResult Function(String message, bool isAction) networkError,
     required TResult Function(String message, bool isAction) cacheError,
-    required TResult Function(bool isAction) inactiveUserProfile,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -35,10 +35,9 @@ mixin _$ClientFailure {
     TResult Function(String message, bool isAction)? resourceNotFound,
     TResult Function(String message, bool isAction)? badRequest,
     TResult Function(String message, bool isAction)? forbiddenAccess,
-    TResult Function(bool isAction)? unauthorizedAccess,
+    TResult Function(String message, bool isAction)? unauthorizedAccess,
     TResult Function(String message, bool isAction)? networkError,
     TResult Function(String message, bool isAction)? cacheError,
-    TResult Function(bool isAction)? inactiveUserProfile,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -47,10 +46,9 @@ mixin _$ClientFailure {
     TResult Function(String message, bool isAction)? resourceNotFound,
     TResult Function(String message, bool isAction)? badRequest,
     TResult Function(String message, bool isAction)? forbiddenAccess,
-    TResult Function(bool isAction)? unauthorizedAccess,
+    TResult Function(String message, bool isAction)? unauthorizedAccess,
     TResult Function(String message, bool isAction)? networkError,
     TResult Function(String message, bool isAction)? cacheError,
-    TResult Function(bool isAction)? inactiveUserProfile,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -63,7 +61,6 @@ mixin _$ClientFailure {
     required TResult Function(UnAuthorizedAccess value) unauthorizedAccess,
     required TResult Function(NetworkError value) networkError,
     required TResult Function(CacheError value) cacheError,
-    required TResult Function(InactiveProfile value) inactiveUserProfile,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -75,7 +72,6 @@ mixin _$ClientFailure {
     TResult Function(UnAuthorizedAccess value)? unauthorizedAccess,
     TResult Function(NetworkError value)? networkError,
     TResult Function(CacheError value)? cacheError,
-    TResult Function(InactiveProfile value)? inactiveUserProfile,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -87,7 +83,6 @@ mixin _$ClientFailure {
     TResult Function(UnAuthorizedAccess value)? unauthorizedAccess,
     TResult Function(NetworkError value)? networkError,
     TResult Function(CacheError value)? cacheError,
-    TResult Function(InactiveProfile value)? inactiveUserProfile,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -102,7 +97,7 @@ abstract class $ClientFailureCopyWith<$Res> {
   factory $ClientFailureCopyWith(
           ClientFailure value, $Res Function(ClientFailure) then) =
       _$ClientFailureCopyWithImpl<$Res>;
-  $Res call({bool isAction});
+  $Res call({String message, bool isAction});
 }
 
 /// @nodoc
@@ -116,9 +111,14 @@ class _$ClientFailureCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object? message = freezed,
     Object? isAction = freezed,
   }) {
     return _then(_value.copyWith(
+      message: message == freezed
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String,
       isAction: isAction == freezed
           ? _value.isAction
           : isAction // ignore: cast_nullable_to_non_nullable
@@ -206,10 +206,9 @@ class _$Unknown implements Unknown {
     required TResult Function(String message, bool isAction) resourceNotFound,
     required TResult Function(String message, bool isAction) badRequest,
     required TResult Function(String message, bool isAction) forbiddenAccess,
-    required TResult Function(bool isAction) unauthorizedAccess,
+    required TResult Function(String message, bool isAction) unauthorizedAccess,
     required TResult Function(String message, bool isAction) networkError,
     required TResult Function(String message, bool isAction) cacheError,
-    required TResult Function(bool isAction) inactiveUserProfile,
   }) {
     return unknown(message, isAction);
   }
@@ -221,10 +220,9 @@ class _$Unknown implements Unknown {
     TResult Function(String message, bool isAction)? resourceNotFound,
     TResult Function(String message, bool isAction)? badRequest,
     TResult Function(String message, bool isAction)? forbiddenAccess,
-    TResult Function(bool isAction)? unauthorizedAccess,
+    TResult Function(String message, bool isAction)? unauthorizedAccess,
     TResult Function(String message, bool isAction)? networkError,
     TResult Function(String message, bool isAction)? cacheError,
-    TResult Function(bool isAction)? inactiveUserProfile,
   }) {
     return unknown?.call(message, isAction);
   }
@@ -236,10 +234,9 @@ class _$Unknown implements Unknown {
     TResult Function(String message, bool isAction)? resourceNotFound,
     TResult Function(String message, bool isAction)? badRequest,
     TResult Function(String message, bool isAction)? forbiddenAccess,
-    TResult Function(bool isAction)? unauthorizedAccess,
+    TResult Function(String message, bool isAction)? unauthorizedAccess,
     TResult Function(String message, bool isAction)? networkError,
     TResult Function(String message, bool isAction)? cacheError,
-    TResult Function(bool isAction)? inactiveUserProfile,
     required TResult orElse(),
   }) {
     if (unknown != null) {
@@ -258,7 +255,6 @@ class _$Unknown implements Unknown {
     required TResult Function(UnAuthorizedAccess value) unauthorizedAccess,
     required TResult Function(NetworkError value) networkError,
     required TResult Function(CacheError value) cacheError,
-    required TResult Function(InactiveProfile value) inactiveUserProfile,
   }) {
     return unknown(this);
   }
@@ -273,7 +269,6 @@ class _$Unknown implements Unknown {
     TResult Function(UnAuthorizedAccess value)? unauthorizedAccess,
     TResult Function(NetworkError value)? networkError,
     TResult Function(CacheError value)? cacheError,
-    TResult Function(InactiveProfile value)? inactiveUserProfile,
   }) {
     return unknown?.call(this);
   }
@@ -288,7 +283,6 @@ class _$Unknown implements Unknown {
     TResult Function(UnAuthorizedAccess value)? unauthorizedAccess,
     TResult Function(NetworkError value)? networkError,
     TResult Function(CacheError value)? cacheError,
-    TResult Function(InactiveProfile value)? inactiveUserProfile,
     required TResult orElse(),
   }) {
     if (unknown != null) {
@@ -302,6 +296,7 @@ abstract class Unknown implements ClientFailure {
   const factory Unknown({required final String message, final bool isAction}) =
       _$Unknown;
 
+  @override
   String get message => throw _privateConstructorUsedError;
   @override
   bool get isAction => throw _privateConstructorUsedError;
@@ -393,10 +388,9 @@ class _$ResourceNotFound implements ResourceNotFound {
     required TResult Function(String message, bool isAction) resourceNotFound,
     required TResult Function(String message, bool isAction) badRequest,
     required TResult Function(String message, bool isAction) forbiddenAccess,
-    required TResult Function(bool isAction) unauthorizedAccess,
+    required TResult Function(String message, bool isAction) unauthorizedAccess,
     required TResult Function(String message, bool isAction) networkError,
     required TResult Function(String message, bool isAction) cacheError,
-    required TResult Function(bool isAction) inactiveUserProfile,
   }) {
     return resourceNotFound(message, isAction);
   }
@@ -408,10 +402,9 @@ class _$ResourceNotFound implements ResourceNotFound {
     TResult Function(String message, bool isAction)? resourceNotFound,
     TResult Function(String message, bool isAction)? badRequest,
     TResult Function(String message, bool isAction)? forbiddenAccess,
-    TResult Function(bool isAction)? unauthorizedAccess,
+    TResult Function(String message, bool isAction)? unauthorizedAccess,
     TResult Function(String message, bool isAction)? networkError,
     TResult Function(String message, bool isAction)? cacheError,
-    TResult Function(bool isAction)? inactiveUserProfile,
   }) {
     return resourceNotFound?.call(message, isAction);
   }
@@ -423,10 +416,9 @@ class _$ResourceNotFound implements ResourceNotFound {
     TResult Function(String message, bool isAction)? resourceNotFound,
     TResult Function(String message, bool isAction)? badRequest,
     TResult Function(String message, bool isAction)? forbiddenAccess,
-    TResult Function(bool isAction)? unauthorizedAccess,
+    TResult Function(String message, bool isAction)? unauthorizedAccess,
     TResult Function(String message, bool isAction)? networkError,
     TResult Function(String message, bool isAction)? cacheError,
-    TResult Function(bool isAction)? inactiveUserProfile,
     required TResult orElse(),
   }) {
     if (resourceNotFound != null) {
@@ -445,7 +437,6 @@ class _$ResourceNotFound implements ResourceNotFound {
     required TResult Function(UnAuthorizedAccess value) unauthorizedAccess,
     required TResult Function(NetworkError value) networkError,
     required TResult Function(CacheError value) cacheError,
-    required TResult Function(InactiveProfile value) inactiveUserProfile,
   }) {
     return resourceNotFound(this);
   }
@@ -460,7 +451,6 @@ class _$ResourceNotFound implements ResourceNotFound {
     TResult Function(UnAuthorizedAccess value)? unauthorizedAccess,
     TResult Function(NetworkError value)? networkError,
     TResult Function(CacheError value)? cacheError,
-    TResult Function(InactiveProfile value)? inactiveUserProfile,
   }) {
     return resourceNotFound?.call(this);
   }
@@ -475,7 +465,6 @@ class _$ResourceNotFound implements ResourceNotFound {
     TResult Function(UnAuthorizedAccess value)? unauthorizedAccess,
     TResult Function(NetworkError value)? networkError,
     TResult Function(CacheError value)? cacheError,
-    TResult Function(InactiveProfile value)? inactiveUserProfile,
     required TResult orElse(),
   }) {
     if (resourceNotFound != null) {
@@ -490,6 +479,7 @@ abstract class ResourceNotFound implements ClientFailure {
       {required final String message,
       final bool isAction}) = _$ResourceNotFound;
 
+  @override
   String get message => throw _privateConstructorUsedError;
   @override
   bool get isAction => throw _privateConstructorUsedError;
@@ -580,10 +570,9 @@ class _$BadRequest implements BadRequest {
     required TResult Function(String message, bool isAction) resourceNotFound,
     required TResult Function(String message, bool isAction) badRequest,
     required TResult Function(String message, bool isAction) forbiddenAccess,
-    required TResult Function(bool isAction) unauthorizedAccess,
+    required TResult Function(String message, bool isAction) unauthorizedAccess,
     required TResult Function(String message, bool isAction) networkError,
     required TResult Function(String message, bool isAction) cacheError,
-    required TResult Function(bool isAction) inactiveUserProfile,
   }) {
     return badRequest(message, isAction);
   }
@@ -595,10 +584,9 @@ class _$BadRequest implements BadRequest {
     TResult Function(String message, bool isAction)? resourceNotFound,
     TResult Function(String message, bool isAction)? badRequest,
     TResult Function(String message, bool isAction)? forbiddenAccess,
-    TResult Function(bool isAction)? unauthorizedAccess,
+    TResult Function(String message, bool isAction)? unauthorizedAccess,
     TResult Function(String message, bool isAction)? networkError,
     TResult Function(String message, bool isAction)? cacheError,
-    TResult Function(bool isAction)? inactiveUserProfile,
   }) {
     return badRequest?.call(message, isAction);
   }
@@ -610,10 +598,9 @@ class _$BadRequest implements BadRequest {
     TResult Function(String message, bool isAction)? resourceNotFound,
     TResult Function(String message, bool isAction)? badRequest,
     TResult Function(String message, bool isAction)? forbiddenAccess,
-    TResult Function(bool isAction)? unauthorizedAccess,
+    TResult Function(String message, bool isAction)? unauthorizedAccess,
     TResult Function(String message, bool isAction)? networkError,
     TResult Function(String message, bool isAction)? cacheError,
-    TResult Function(bool isAction)? inactiveUserProfile,
     required TResult orElse(),
   }) {
     if (badRequest != null) {
@@ -632,7 +619,6 @@ class _$BadRequest implements BadRequest {
     required TResult Function(UnAuthorizedAccess value) unauthorizedAccess,
     required TResult Function(NetworkError value) networkError,
     required TResult Function(CacheError value) cacheError,
-    required TResult Function(InactiveProfile value) inactiveUserProfile,
   }) {
     return badRequest(this);
   }
@@ -647,7 +633,6 @@ class _$BadRequest implements BadRequest {
     TResult Function(UnAuthorizedAccess value)? unauthorizedAccess,
     TResult Function(NetworkError value)? networkError,
     TResult Function(CacheError value)? cacheError,
-    TResult Function(InactiveProfile value)? inactiveUserProfile,
   }) {
     return badRequest?.call(this);
   }
@@ -662,7 +647,6 @@ class _$BadRequest implements BadRequest {
     TResult Function(UnAuthorizedAccess value)? unauthorizedAccess,
     TResult Function(NetworkError value)? networkError,
     TResult Function(CacheError value)? cacheError,
-    TResult Function(InactiveProfile value)? inactiveUserProfile,
     required TResult orElse(),
   }) {
     if (badRequest != null) {
@@ -676,6 +660,7 @@ abstract class BadRequest implements ClientFailure {
   const factory BadRequest(
       {required final String message, final bool isAction}) = _$BadRequest;
 
+  @override
   String get message => throw _privateConstructorUsedError;
   @override
   bool get isAction => throw _privateConstructorUsedError;
@@ -767,10 +752,9 @@ class _$ForbiddenAccess implements ForbiddenAccess {
     required TResult Function(String message, bool isAction) resourceNotFound,
     required TResult Function(String message, bool isAction) badRequest,
     required TResult Function(String message, bool isAction) forbiddenAccess,
-    required TResult Function(bool isAction) unauthorizedAccess,
+    required TResult Function(String message, bool isAction) unauthorizedAccess,
     required TResult Function(String message, bool isAction) networkError,
     required TResult Function(String message, bool isAction) cacheError,
-    required TResult Function(bool isAction) inactiveUserProfile,
   }) {
     return forbiddenAccess(message, isAction);
   }
@@ -782,10 +766,9 @@ class _$ForbiddenAccess implements ForbiddenAccess {
     TResult Function(String message, bool isAction)? resourceNotFound,
     TResult Function(String message, bool isAction)? badRequest,
     TResult Function(String message, bool isAction)? forbiddenAccess,
-    TResult Function(bool isAction)? unauthorizedAccess,
+    TResult Function(String message, bool isAction)? unauthorizedAccess,
     TResult Function(String message, bool isAction)? networkError,
     TResult Function(String message, bool isAction)? cacheError,
-    TResult Function(bool isAction)? inactiveUserProfile,
   }) {
     return forbiddenAccess?.call(message, isAction);
   }
@@ -797,10 +780,9 @@ class _$ForbiddenAccess implements ForbiddenAccess {
     TResult Function(String message, bool isAction)? resourceNotFound,
     TResult Function(String message, bool isAction)? badRequest,
     TResult Function(String message, bool isAction)? forbiddenAccess,
-    TResult Function(bool isAction)? unauthorizedAccess,
+    TResult Function(String message, bool isAction)? unauthorizedAccess,
     TResult Function(String message, bool isAction)? networkError,
     TResult Function(String message, bool isAction)? cacheError,
-    TResult Function(bool isAction)? inactiveUserProfile,
     required TResult orElse(),
   }) {
     if (forbiddenAccess != null) {
@@ -819,7 +801,6 @@ class _$ForbiddenAccess implements ForbiddenAccess {
     required TResult Function(UnAuthorizedAccess value) unauthorizedAccess,
     required TResult Function(NetworkError value) networkError,
     required TResult Function(CacheError value) cacheError,
-    required TResult Function(InactiveProfile value) inactiveUserProfile,
   }) {
     return forbiddenAccess(this);
   }
@@ -834,7 +815,6 @@ class _$ForbiddenAccess implements ForbiddenAccess {
     TResult Function(UnAuthorizedAccess value)? unauthorizedAccess,
     TResult Function(NetworkError value)? networkError,
     TResult Function(CacheError value)? cacheError,
-    TResult Function(InactiveProfile value)? inactiveUserProfile,
   }) {
     return forbiddenAccess?.call(this);
   }
@@ -849,7 +829,6 @@ class _$ForbiddenAccess implements ForbiddenAccess {
     TResult Function(UnAuthorizedAccess value)? unauthorizedAccess,
     TResult Function(NetworkError value)? networkError,
     TResult Function(CacheError value)? cacheError,
-    TResult Function(InactiveProfile value)? inactiveUserProfile,
     required TResult orElse(),
   }) {
     if (forbiddenAccess != null) {
@@ -863,6 +842,7 @@ abstract class ForbiddenAccess implements ClientFailure {
   const factory ForbiddenAccess(
       {required final String message, final bool isAction}) = _$ForbiddenAccess;
 
+  @override
   String get message => throw _privateConstructorUsedError;
   @override
   bool get isAction => throw _privateConstructorUsedError;
@@ -879,7 +859,7 @@ abstract class _$$UnAuthorizedAccessCopyWith<$Res>
           $Res Function(_$UnAuthorizedAccess) then) =
       __$$UnAuthorizedAccessCopyWithImpl<$Res>;
   @override
-  $Res call({bool isAction});
+  $Res call({String message, bool isAction});
 }
 
 /// @nodoc
@@ -895,9 +875,14 @@ class __$$UnAuthorizedAccessCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object? message = freezed,
     Object? isAction = freezed,
   }) {
     return _then(_$UnAuthorizedAccess(
+      message: message == freezed
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String,
       isAction: isAction == freezed
           ? _value.isAction
           : isAction // ignore: cast_nullable_to_non_nullable
@@ -909,15 +894,17 @@ class __$$UnAuthorizedAccessCopyWithImpl<$Res>
 /// @nodoc
 
 class _$UnAuthorizedAccess implements UnAuthorizedAccess {
-  const _$UnAuthorizedAccess({this.isAction = false});
+  const _$UnAuthorizedAccess({required this.message, this.isAction = false});
 
+  @override
+  final String message;
   @override
   @JsonKey()
   final bool isAction;
 
   @override
   String toString() {
-    return 'ClientFailure.unauthorizedAccess(isAction: $isAction)';
+    return 'ClientFailure.unauthorizedAccess(message: $message, isAction: $isAction)';
   }
 
   @override
@@ -925,12 +912,15 @@ class _$UnAuthorizedAccess implements UnAuthorizedAccess {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$UnAuthorizedAccess &&
+            const DeepCollectionEquality().equals(other.message, message) &&
             const DeepCollectionEquality().equals(other.isAction, isAction));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(isAction));
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(message),
+      const DeepCollectionEquality().hash(isAction));
 
   @JsonKey(ignore: true)
   @override
@@ -945,12 +935,11 @@ class _$UnAuthorizedAccess implements UnAuthorizedAccess {
     required TResult Function(String message, bool isAction) resourceNotFound,
     required TResult Function(String message, bool isAction) badRequest,
     required TResult Function(String message, bool isAction) forbiddenAccess,
-    required TResult Function(bool isAction) unauthorizedAccess,
+    required TResult Function(String message, bool isAction) unauthorizedAccess,
     required TResult Function(String message, bool isAction) networkError,
     required TResult Function(String message, bool isAction) cacheError,
-    required TResult Function(bool isAction) inactiveUserProfile,
   }) {
-    return unauthorizedAccess(isAction);
+    return unauthorizedAccess(message, isAction);
   }
 
   @override
@@ -960,12 +949,11 @@ class _$UnAuthorizedAccess implements UnAuthorizedAccess {
     TResult Function(String message, bool isAction)? resourceNotFound,
     TResult Function(String message, bool isAction)? badRequest,
     TResult Function(String message, bool isAction)? forbiddenAccess,
-    TResult Function(bool isAction)? unauthorizedAccess,
+    TResult Function(String message, bool isAction)? unauthorizedAccess,
     TResult Function(String message, bool isAction)? networkError,
     TResult Function(String message, bool isAction)? cacheError,
-    TResult Function(bool isAction)? inactiveUserProfile,
   }) {
-    return unauthorizedAccess?.call(isAction);
+    return unauthorizedAccess?.call(message, isAction);
   }
 
   @override
@@ -975,14 +963,13 @@ class _$UnAuthorizedAccess implements UnAuthorizedAccess {
     TResult Function(String message, bool isAction)? resourceNotFound,
     TResult Function(String message, bool isAction)? badRequest,
     TResult Function(String message, bool isAction)? forbiddenAccess,
-    TResult Function(bool isAction)? unauthorizedAccess,
+    TResult Function(String message, bool isAction)? unauthorizedAccess,
     TResult Function(String message, bool isAction)? networkError,
     TResult Function(String message, bool isAction)? cacheError,
-    TResult Function(bool isAction)? inactiveUserProfile,
     required TResult orElse(),
   }) {
     if (unauthorizedAccess != null) {
-      return unauthorizedAccess(isAction);
+      return unauthorizedAccess(message, isAction);
     }
     return orElse();
   }
@@ -997,7 +984,6 @@ class _$UnAuthorizedAccess implements UnAuthorizedAccess {
     required TResult Function(UnAuthorizedAccess value) unauthorizedAccess,
     required TResult Function(NetworkError value) networkError,
     required TResult Function(CacheError value) cacheError,
-    required TResult Function(InactiveProfile value) inactiveUserProfile,
   }) {
     return unauthorizedAccess(this);
   }
@@ -1012,7 +998,6 @@ class _$UnAuthorizedAccess implements UnAuthorizedAccess {
     TResult Function(UnAuthorizedAccess value)? unauthorizedAccess,
     TResult Function(NetworkError value)? networkError,
     TResult Function(CacheError value)? cacheError,
-    TResult Function(InactiveProfile value)? inactiveUserProfile,
   }) {
     return unauthorizedAccess?.call(this);
   }
@@ -1027,7 +1012,6 @@ class _$UnAuthorizedAccess implements UnAuthorizedAccess {
     TResult Function(UnAuthorizedAccess value)? unauthorizedAccess,
     TResult Function(NetworkError value)? networkError,
     TResult Function(CacheError value)? cacheError,
-    TResult Function(InactiveProfile value)? inactiveUserProfile,
     required TResult orElse(),
   }) {
     if (unauthorizedAccess != null) {
@@ -1038,9 +1022,12 @@ class _$UnAuthorizedAccess implements UnAuthorizedAccess {
 }
 
 abstract class UnAuthorizedAccess implements ClientFailure {
-  const factory UnAuthorizedAccess({final bool isAction}) =
-      _$UnAuthorizedAccess;
+  const factory UnAuthorizedAccess(
+      {required final String message,
+      final bool isAction}) = _$UnAuthorizedAccess;
 
+  @override
+  String get message => throw _privateConstructorUsedError;
   @override
   bool get isAction => throw _privateConstructorUsedError;
   @override
@@ -1131,10 +1118,9 @@ class _$NetworkError implements NetworkError {
     required TResult Function(String message, bool isAction) resourceNotFound,
     required TResult Function(String message, bool isAction) badRequest,
     required TResult Function(String message, bool isAction) forbiddenAccess,
-    required TResult Function(bool isAction) unauthorizedAccess,
+    required TResult Function(String message, bool isAction) unauthorizedAccess,
     required TResult Function(String message, bool isAction) networkError,
     required TResult Function(String message, bool isAction) cacheError,
-    required TResult Function(bool isAction) inactiveUserProfile,
   }) {
     return networkError(message, isAction);
   }
@@ -1146,10 +1132,9 @@ class _$NetworkError implements NetworkError {
     TResult Function(String message, bool isAction)? resourceNotFound,
     TResult Function(String message, bool isAction)? badRequest,
     TResult Function(String message, bool isAction)? forbiddenAccess,
-    TResult Function(bool isAction)? unauthorizedAccess,
+    TResult Function(String message, bool isAction)? unauthorizedAccess,
     TResult Function(String message, bool isAction)? networkError,
     TResult Function(String message, bool isAction)? cacheError,
-    TResult Function(bool isAction)? inactiveUserProfile,
   }) {
     return networkError?.call(message, isAction);
   }
@@ -1161,10 +1146,9 @@ class _$NetworkError implements NetworkError {
     TResult Function(String message, bool isAction)? resourceNotFound,
     TResult Function(String message, bool isAction)? badRequest,
     TResult Function(String message, bool isAction)? forbiddenAccess,
-    TResult Function(bool isAction)? unauthorizedAccess,
+    TResult Function(String message, bool isAction)? unauthorizedAccess,
     TResult Function(String message, bool isAction)? networkError,
     TResult Function(String message, bool isAction)? cacheError,
-    TResult Function(bool isAction)? inactiveUserProfile,
     required TResult orElse(),
   }) {
     if (networkError != null) {
@@ -1183,7 +1167,6 @@ class _$NetworkError implements NetworkError {
     required TResult Function(UnAuthorizedAccess value) unauthorizedAccess,
     required TResult Function(NetworkError value) networkError,
     required TResult Function(CacheError value) cacheError,
-    required TResult Function(InactiveProfile value) inactiveUserProfile,
   }) {
     return networkError(this);
   }
@@ -1198,7 +1181,6 @@ class _$NetworkError implements NetworkError {
     TResult Function(UnAuthorizedAccess value)? unauthorizedAccess,
     TResult Function(NetworkError value)? networkError,
     TResult Function(CacheError value)? cacheError,
-    TResult Function(InactiveProfile value)? inactiveUserProfile,
   }) {
     return networkError?.call(this);
   }
@@ -1213,7 +1195,6 @@ class _$NetworkError implements NetworkError {
     TResult Function(UnAuthorizedAccess value)? unauthorizedAccess,
     TResult Function(NetworkError value)? networkError,
     TResult Function(CacheError value)? cacheError,
-    TResult Function(InactiveProfile value)? inactiveUserProfile,
     required TResult orElse(),
   }) {
     if (networkError != null) {
@@ -1227,6 +1208,7 @@ abstract class NetworkError implements ClientFailure {
   const factory NetworkError(
       {required final String message, final bool isAction}) = _$NetworkError;
 
+  @override
   String get message => throw _privateConstructorUsedError;
   @override
   bool get isAction => throw _privateConstructorUsedError;
@@ -1317,10 +1299,9 @@ class _$CacheError implements CacheError {
     required TResult Function(String message, bool isAction) resourceNotFound,
     required TResult Function(String message, bool isAction) badRequest,
     required TResult Function(String message, bool isAction) forbiddenAccess,
-    required TResult Function(bool isAction) unauthorizedAccess,
+    required TResult Function(String message, bool isAction) unauthorizedAccess,
     required TResult Function(String message, bool isAction) networkError,
     required TResult Function(String message, bool isAction) cacheError,
-    required TResult Function(bool isAction) inactiveUserProfile,
   }) {
     return cacheError(message, isAction);
   }
@@ -1332,10 +1313,9 @@ class _$CacheError implements CacheError {
     TResult Function(String message, bool isAction)? resourceNotFound,
     TResult Function(String message, bool isAction)? badRequest,
     TResult Function(String message, bool isAction)? forbiddenAccess,
-    TResult Function(bool isAction)? unauthorizedAccess,
+    TResult Function(String message, bool isAction)? unauthorizedAccess,
     TResult Function(String message, bool isAction)? networkError,
     TResult Function(String message, bool isAction)? cacheError,
-    TResult Function(bool isAction)? inactiveUserProfile,
   }) {
     return cacheError?.call(message, isAction);
   }
@@ -1347,10 +1327,9 @@ class _$CacheError implements CacheError {
     TResult Function(String message, bool isAction)? resourceNotFound,
     TResult Function(String message, bool isAction)? badRequest,
     TResult Function(String message, bool isAction)? forbiddenAccess,
-    TResult Function(bool isAction)? unauthorizedAccess,
+    TResult Function(String message, bool isAction)? unauthorizedAccess,
     TResult Function(String message, bool isAction)? networkError,
     TResult Function(String message, bool isAction)? cacheError,
-    TResult Function(bool isAction)? inactiveUserProfile,
     required TResult orElse(),
   }) {
     if (cacheError != null) {
@@ -1369,7 +1348,6 @@ class _$CacheError implements CacheError {
     required TResult Function(UnAuthorizedAccess value) unauthorizedAccess,
     required TResult Function(NetworkError value) networkError,
     required TResult Function(CacheError value) cacheError,
-    required TResult Function(InactiveProfile value) inactiveUserProfile,
   }) {
     return cacheError(this);
   }
@@ -1384,7 +1362,6 @@ class _$CacheError implements CacheError {
     TResult Function(UnAuthorizedAccess value)? unauthorizedAccess,
     TResult Function(NetworkError value)? networkError,
     TResult Function(CacheError value)? cacheError,
-    TResult Function(InactiveProfile value)? inactiveUserProfile,
   }) {
     return cacheError?.call(this);
   }
@@ -1399,7 +1376,6 @@ class _$CacheError implements CacheError {
     TResult Function(UnAuthorizedAccess value)? unauthorizedAccess,
     TResult Function(NetworkError value)? networkError,
     TResult Function(CacheError value)? cacheError,
-    TResult Function(InactiveProfile value)? inactiveUserProfile,
     required TResult orElse(),
   }) {
     if (cacheError != null) {
@@ -1413,186 +1389,12 @@ abstract class CacheError implements ClientFailure {
   const factory CacheError(
       {required final String message, final bool isAction}) = _$CacheError;
 
+  @override
   String get message => throw _privateConstructorUsedError;
   @override
   bool get isAction => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$$CacheErrorCopyWith<_$CacheError> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$InactiveProfileCopyWith<$Res>
-    implements $ClientFailureCopyWith<$Res> {
-  factory _$$InactiveProfileCopyWith(
-          _$InactiveProfile value, $Res Function(_$InactiveProfile) then) =
-      __$$InactiveProfileCopyWithImpl<$Res>;
-  @override
-  $Res call({bool isAction});
-}
-
-/// @nodoc
-class __$$InactiveProfileCopyWithImpl<$Res>
-    extends _$ClientFailureCopyWithImpl<$Res>
-    implements _$$InactiveProfileCopyWith<$Res> {
-  __$$InactiveProfileCopyWithImpl(
-      _$InactiveProfile _value, $Res Function(_$InactiveProfile) _then)
-      : super(_value, (v) => _then(v as _$InactiveProfile));
-
-  @override
-  _$InactiveProfile get _value => super._value as _$InactiveProfile;
-
-  @override
-  $Res call({
-    Object? isAction = freezed,
-  }) {
-    return _then(_$InactiveProfile(
-      isAction: isAction == freezed
-          ? _value.isAction
-          : isAction // ignore: cast_nullable_to_non_nullable
-              as bool,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$InactiveProfile implements InactiveProfile {
-  const _$InactiveProfile({this.isAction = false});
-
-  @override
-  @JsonKey()
-  final bool isAction;
-
-  @override
-  String toString() {
-    return 'ClientFailure.inactiveUserProfile(isAction: $isAction)';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$InactiveProfile &&
-            const DeepCollectionEquality().equals(other.isAction, isAction));
-  }
-
-  @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(isAction));
-
-  @JsonKey(ignore: true)
-  @override
-  _$$InactiveProfileCopyWith<_$InactiveProfile> get copyWith =>
-      __$$InactiveProfileCopyWithImpl<_$InactiveProfile>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(String message, bool isAction) unknown,
-    required TResult Function(String message, bool isAction) resourceNotFound,
-    required TResult Function(String message, bool isAction) badRequest,
-    required TResult Function(String message, bool isAction) forbiddenAccess,
-    required TResult Function(bool isAction) unauthorizedAccess,
-    required TResult Function(String message, bool isAction) networkError,
-    required TResult Function(String message, bool isAction) cacheError,
-    required TResult Function(bool isAction) inactiveUserProfile,
-  }) {
-    return inactiveUserProfile(isAction);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(String message, bool isAction)? unknown,
-    TResult Function(String message, bool isAction)? resourceNotFound,
-    TResult Function(String message, bool isAction)? badRequest,
-    TResult Function(String message, bool isAction)? forbiddenAccess,
-    TResult Function(bool isAction)? unauthorizedAccess,
-    TResult Function(String message, bool isAction)? networkError,
-    TResult Function(String message, bool isAction)? cacheError,
-    TResult Function(bool isAction)? inactiveUserProfile,
-  }) {
-    return inactiveUserProfile?.call(isAction);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String message, bool isAction)? unknown,
-    TResult Function(String message, bool isAction)? resourceNotFound,
-    TResult Function(String message, bool isAction)? badRequest,
-    TResult Function(String message, bool isAction)? forbiddenAccess,
-    TResult Function(bool isAction)? unauthorizedAccess,
-    TResult Function(String message, bool isAction)? networkError,
-    TResult Function(String message, bool isAction)? cacheError,
-    TResult Function(bool isAction)? inactiveUserProfile,
-    required TResult orElse(),
-  }) {
-    if (inactiveUserProfile != null) {
-      return inactiveUserProfile(isAction);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(Unknown value) unknown,
-    required TResult Function(ResourceNotFound value) resourceNotFound,
-    required TResult Function(BadRequest value) badRequest,
-    required TResult Function(ForbiddenAccess value) forbiddenAccess,
-    required TResult Function(UnAuthorizedAccess value) unauthorizedAccess,
-    required TResult Function(NetworkError value) networkError,
-    required TResult Function(CacheError value) cacheError,
-    required TResult Function(InactiveProfile value) inactiveUserProfile,
-  }) {
-    return inactiveUserProfile(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(Unknown value)? unknown,
-    TResult Function(ResourceNotFound value)? resourceNotFound,
-    TResult Function(BadRequest value)? badRequest,
-    TResult Function(ForbiddenAccess value)? forbiddenAccess,
-    TResult Function(UnAuthorizedAccess value)? unauthorizedAccess,
-    TResult Function(NetworkError value)? networkError,
-    TResult Function(CacheError value)? cacheError,
-    TResult Function(InactiveProfile value)? inactiveUserProfile,
-  }) {
-    return inactiveUserProfile?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(Unknown value)? unknown,
-    TResult Function(ResourceNotFound value)? resourceNotFound,
-    TResult Function(BadRequest value)? badRequest,
-    TResult Function(ForbiddenAccess value)? forbiddenAccess,
-    TResult Function(UnAuthorizedAccess value)? unauthorizedAccess,
-    TResult Function(NetworkError value)? networkError,
-    TResult Function(CacheError value)? cacheError,
-    TResult Function(InactiveProfile value)? inactiveUserProfile,
-    required TResult orElse(),
-  }) {
-    if (inactiveUserProfile != null) {
-      return inactiveUserProfile(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class InactiveProfile implements ClientFailure {
-  const factory InactiveProfile({final bool isAction}) = _$InactiveProfile;
-
-  @override
-  bool get isAction => throw _privateConstructorUsedError;
-  @override
-  @JsonKey(ignore: true)
-  _$$InactiveProfileCopyWith<_$InactiveProfile> get copyWith =>
       throw _privateConstructorUsedError;
 }

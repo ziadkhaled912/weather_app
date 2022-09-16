@@ -1,10 +1,10 @@
 import 'package:flutter/foundation.dart';
-import 'package:gam3ity/core/data/error/exceptions/application_exception.dart';
-import 'package:gam3ity/core/data/error/exceptions/client_exception.dart';
-import 'package:gam3ity/core/data/error/exceptions/server_exception.dart';
-import 'package:gam3ity/core/data/error/failures/client_failure.dart';
-import 'package:gam3ity/core/data/error/failures/server_failure.dart';
-import 'package:gam3ity/generated/l10n.dart';
+import 'package:weather_app/core/data/error/exceptions/application_exception.dart';
+import 'package:weather_app/core/data/error/exceptions/client_exception.dart';
+import 'package:weather_app/core/data/error/exceptions/server_exception.dart';
+import 'package:weather_app/core/data/error/failures/client_failure.dart';
+import 'package:weather_app/core/data/error/failures/server_failure.dart';
+import 'package:weather_app/generated/l10n.dart';
 
 abstract class Failure {}
 
@@ -29,7 +29,7 @@ Failure dioExceptionsDecoder(
                 message: message, isAction: isAnAction),
         unauthorizedAccess: () {
           unauthorizedAccessHandler();
-          return ClientFailure.unauthorizedAccess(isAction: isAnAction);
+          return ClientFailure.unauthorizedAccess(message: "Unauthorized Access",isAction: isAnAction);
         },
         networkError: (String message) =>
             ClientFailure.networkError(message: message, isAction: isAnAction),
@@ -39,8 +39,7 @@ Failure dioExceptionsDecoder(
             ClientFailure.badRequest(message: message, isAction: isAnAction),
         forbiddenAccess: (String message) => ClientFailure.forbiddenAccess(
             message: message, isAction: isAnAction),
-        inactiveProfile: () =>
-            ClientFailure.inactiveUserProfile(isAction: isAnAction));
+       );
   } else if (e is ServerException) {
     return e.when(
         unknown: (message) =>
